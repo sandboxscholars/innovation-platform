@@ -1,41 +1,46 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { Route, Routes, Outlet } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
 
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
 
-// Function for Page Layout
+// Page Layout
+function Layout() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-function Layout(){
   return (
-  <div className="w-full min-h-screen flex flex-col">
-    <div>
-      <Navbar />
-    </div>
-    <div className="flex-1 overflow-auto">
-      <Outlet />
-    </div>
-  </div>
-  )
+    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+      {/* Navbar shifts right when menu is open */}
+      <div
+        className={`transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-64' : 'translate-x-0'
+        }`}
+      >
+        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      </div>
 
+      {/* Page content also shifts right */}
+      <div
+        className={`flex-1 overflow-auto transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? 'translate-x-64' : 'translate-x-0'
+        }`}
+      >
+        <Outlet />
+      </div>
+    </div>
+  );
 }
 
-
-function App() {
-
+export default function App() {
   return (
     <main>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           {/* Add more routes as needed */}
-          </Route>
+        </Route>
       </Routes>
-  </main>
-  )
+    </main>
+  );
 }
-
-export default App

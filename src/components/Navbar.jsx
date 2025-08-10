@@ -1,102 +1,103 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { colors } from '../assets/constants/colors';
+import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
+import { createPortal } from 'react-dom';
 
-const Navbar = () => {
-  const [isMenuOpen, setIsmenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsmenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsmenuOpen(false);
-  };
+export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <>
-      {/* Navbar */}
-      <nav
-        className="bg-warmGray border-b border-gray-400 top-0 w-full shadow-md z-10"
-      >
-        <div className="max-w-screen-xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800">
-            <Link to="/" className="hover:text-brandSecondary">
-              MyLogo
-            </Link>
+      {/* Top bar */}
+      <nav className="sticky top-0 z-50 h-14 md:h-16 bg-warmGray border-b border-gray-400 top-0 w-full shadow-md z-50">
+        <div className="max-w-screen-xl mx-auto px-4 md:px-6 py-3 md:py-4 flex items-center justify-between gap-4">
+          {/* Hamburger Menu */}
+          <div className="flex items-center gap-4">
+            <button onClick={toggleMenu} className="md:hidden" aria-label="Open menu">
+              <FaBars className="h-6 w-6" />
+            </button>
+            {/* Logo */}
+            <div className="text-2xl font-bold text-gray-800">
+              <Link to="/" className="hover:text-brandSecondary">Logo</Link>
+            </div>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
-          <button onClick={toggleMenu} className="md:hidden">
-            <FaBars className="h-6 w-6" />
-          </button>
-
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-6 mx-auto">
-            <li>
-              <Link to="/" className="text-deepGray hover:text-brandSecondary transition duration-300">Home</Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-deepGray hover:text-brandSecondary transition duration-300">About</Link>
-            </li>
-            <li>
-              <Link to="/projects" className="text-deepGray hover:text-brandSecondary transition duration-300">Projects</Link>
-            </li>
-            <li>
-              <Link to="/blogs" className="text-deepGray hover:text-brandSecondary transition duration-300">Blogs</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-deepGray hover:text-brandSecondary transition duration-300">Contact</Link>
-            </li>
+          {/* Desktop links */}
+          <ul className="hidden md:flex space-x-6 flex-1 justify-center">
+            <li><Link to="/" className="text-deepGray hover:text-brandSecondary transition">Home</Link></li>
+            <li><Link to="/about" className="text-deepGray hover:text-brandSecondary transition">About</Link></li>
+            <li><Link to="/projects" className="text-deepGray hover:text-brandSecondary transition">Projects</Link></li>
+            <li><Link to="/blogs" className="text-deepGray hover:text-brandSecondary transition">Blogs</Link></li>
+            <li><Link to="/contact" className="text-deepGray hover:text-brandSecondary transition">Contact</Link></li>
           </ul>
+
+          {/* Search Input*/}
+          <form
+            className="ml-auto flex items-center gap-2"
+            onSubmit={(e) => e.preventDefault()}
+            role="search"
+          >
+            <div className="flex items-center border border-gray-600 rounded-md px-2 h-9">
+              <FaSearch className="mr-2" />
+              <input
+                type="search"
+                placeholder="Search..."
+                className="bg-transparent outline-none text-sm w-28 sm:w-40 md:w-40"
+              />
+            </div>
+          </form>
         </div>
       </nav>
 
-      {/* Overlay for Mobile Menu */}
-      {isMenuOpen && (
+      {/* Overlay via portal */}
+      {isMenuOpen &&
+        createPortal(
+          <div
+            className="fixed inset-0 z-40 md:hidden"
+            onClick={closeMenu}
+          />,
+          document.body
+        )
+      }
+
+      {/* LEFT drawer via portal */}
+      {createPortal(
         <div
-          className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm"
-          onClick={closeMenu}
-        />
-      )}
+          className={`fixed top-0 left-0 h-full w-64 bg-warmGray z-50 transform transition-transform duration-300 ease-in-out
+            ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'} md:hidden shadow-lg`}
+        >
+          <div className="p-6 flex flex-col h-full">
+            <div className="flex justify-end mb-4">
+              <button onClick={closeMenu} aria-label="Close menu">
+                <FaTimes className="h-6 w-6 text-gray-600 hover:text-pureBlack" />
+              </button>
+            </div>
 
-      {/* Mobile Menu Drawer */}
-      <div
-        className={`fixed top-0 right-0 h-full w-64 bg-warmGray z-50 transform transition-transform duration-300 ease-in-out
-        ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden shadow-lg`}
-      >
-        <div className="p-6 flex flex-col h-full">
-          {/* Close Button */}
-          <div className="flex justify-end mb-4">
-            <button onClick={closeMenu}>
-              <FaTimes className="h-6 w-6 text-gray-600 hover:text-pureBlack" />
-            </button>
+            {/* search inside Mobile Menu */}
+            <form className="mb-6" onSubmit={(e) => e.preventDefault()} role="search">
+              <div className="flex items-center border border-gray-600 rounded-md px-2 h-10">
+                <FaSearch className="mr-2" />
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  className="bg-transparent outline-none text-sm w-full"
+                />
+              </div>
+            </form>
+
+            {/* Drawer links */}
+            <ul className="flex flex-col gap-6">
+              <li><Link to="/" onClick={closeMenu} className="text-deepGray hover:text-brandSecondary text-lg">Home</Link></li>
+              <li><Link to="/about" onClick={closeMenu} className="text-deepGray hover:text-brandSecondary text-lg">About</Link></li>
+              <li><Link to="/projects" onClick={closeMenu} className="text-deepGray hover:text-brandSecondary text-lg">Projects</Link></li>
+              <li><Link to="/blogs" onClick={closeMenu} className="text-deepGray hover:text-brandSecondary text-lg">Blogs</Link></li>
+              <li><Link to="/contact" onClick={closeMenu} className="text-deepGray hover:text-brandSecondary text-lg">Contact</Link></li>
+            </ul>
           </div>
-
-          {/* Mobile Navigation Links */}
-          <ul className="flex flex-col gap-6">
-            <li>
-              <Link to="/" className="text-deepGray hover:text-brandSecondary text-lg" onClick={closeMenu}>Home</Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-deepGray hover:text-brandSecondary text-lg" onClick={closeMenu}>About</Link>
-            </li>
-            <li>
-              <Link to="/projects" className="text-deepGray hover:text-brandSecondary text-lg" onClick={closeMenu}>Projects</Link>
-            </li>
-            <li>
-              <Link to="/blogs" className="text-deepGray hover:text-brandSecondary text-lg" onClick={closeMenu}>Blogs</Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-deepGray hover:text-brandSecondary text-lg" onClick={closeMenu}>Contact</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </div>,
+        document.body
+      )}
     </>
   );
-};
-
-export default Navbar;
+}
