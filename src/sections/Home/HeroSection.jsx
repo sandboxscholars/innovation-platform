@@ -1,5 +1,11 @@
 import React from 'react';
 
+// The top banner section of the landing page
+// - Contains a search bar, main headline, subtext, and a "Sign Up" CTA button
+// - Includes a logo/picture on the right side
+// - Goal: capture user attention immediately and encourage sign-ups
+// - You can comment out the entire section and write you own code or update the section with new changes
+
 const HeroSection = () => {
   return (
     <section className="bg-lightPeach relative overflow-hidden">

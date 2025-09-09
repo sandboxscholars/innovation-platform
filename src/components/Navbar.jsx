@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
 import { createPortal } from 'react-dom';
 
+// Navbar Component
+// - Fixed top navigation bar
+// - Links: Blogs, SAT, About Us, Join Us, NCTB, Study Abroad
+// Change the code as required
+
 export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
@@ -61,7 +66,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
         )
       }
 
-      {/* LEFT drawer via portal */}
+      {/* LEFT drawer(Mobile menu) via portal */}
       {createPortal(
         <div
           className={`fixed top-0 left-0 h-full w-64 bg-warmGray z-50 transform transition-transform duration-300 ease-in-out

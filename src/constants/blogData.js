@@ -1,0 +1,1 @@
+{/* List your blog data here if not using database */}

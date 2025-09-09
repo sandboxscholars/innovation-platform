@@ -3,9 +3,15 @@ import { Route, Routes, Outlet } from 'react-router-dom';
 import './App.css';
 
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
+import Footer from './components/Footer';
 
-// Page Layout
+
+//- Global wrapper/Layout for all pages
+// - Always displays the Navbar at the top and Footer at the bottom for all pages
+// - Uses <Outlet/> from React Router to render the current page content
+// - Handles sidebar/mobile menu by shifting both Navbar and content when menu is open
+
 function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -28,9 +34,18 @@ function Layout() {
       >
         <Outlet />
       </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
+
+// - Root component of the app
+// - Sets up client-side routing with React Router
+// - Wraps all routes inside the Layout (so Navbar and Footer is always shown)
+// - Currently only has Home.jsx at "/" route
+// - Can be expanded with more routes (Blogs, Clubs, About Us, etc.)
 
 export default function App() {
   return (
@@ -38,7 +53,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          {/* Add more routes as needed */}
+          {/* Add more routes as needed(More Pages e.g. Blogs, Clubs, About Us etc) */}
         </Route>
       </Routes>
     </main>
