@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default function HeroSection() {
-  return (
-    <div>HeroSection</div>
-  )
+  return <div>Hero Section</div>;
 }
