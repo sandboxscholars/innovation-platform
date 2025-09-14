@@ -1,68 +1,144 @@
+/* Import Tailwind base styles */
+@import "tailwindcss";
+/* Import animations from tailwind-animate-css plugin */
+@import "tw-animate-css";
+
+/* Custom variant for dark mode */
+@custom-variant dark (&:is(.dark *));
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+  font-family: "Agrandir Regular";
+  src: url("/fonts/Agrandir-Regular.otf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+
+@font-face {
+  font-family: "Helvetica Regular";
+  src: url("/fonts/Helvetica.ttf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+@font-face {
+  font-family: "The Seasons Bold";
+  src: url("/fonts/Fontspring-DEMO-theseasons-bd.otf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+@font-face {
+  font-family: "29lt Zawi Bold";
+  src: url("/fonts/29lt-zawi-bold.otf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+@font-face {
+  font-family: "NeueMachina Ultrabold";
+  src: url("/fonts/NeueMachina-Ultrabold.otf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+@font-face {
+  font-family:"Rig BoldHalftone";
+  src: url("/fonts/Rig-BoldHalftone.ttf") format("opentype");
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+  display: swap;
+}
+
+/* fonts */
+.font-agrandir {
+  font-family: "Agrandir Regular", sans-serif;
+}
+
+.font-dm-sarif {
+  font-family: "DM Sans";
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+}
+.font-Helvetica {
+  font-family: "Helvetica Regular";
+}
+.font-seasons-bold {
+  font-family: "The Seasons Bold";
+}
+
+.font-playfair-display {
+  font-family: "Playfair Display";
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+}
+
+.font-poppins {
+  font-family: "Poppins";
+  font-optical-sizing: auto;
+  font-weight: auto;
+  font-style: auto;
+}
+
+.font-zawi-bold {
+  font-family: "29lt Zawi Bold";
+}
+
+.font-neueMachina-ultraBold {
+  font-family: "NeueMachina Ultrabold";
+}
+
+.font-rig-boldHalftone {
+  font-family: "Rig BoldHalftone";
+}
+
+
+
+
+/* Root variables: light theme */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --color-background: #f1f1f1;
+  --color-foreground: oklch(0.6033 0.2146 269.58);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Dark mode overrides */
+.dark {
+  --color-background: oklch(0.2 0 0);
+  --color-foreground: #f1f1f1;;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+/* Theme mapping */
+@theme inline {
+  --background-color: var(--color-background);
+  --foreground-color: var(--color-foreground);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* Base layer */
+@layer base {
+  * {
+    /* @apply border-border outline-ring/50; */
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  body {
+    /* @apply bg-background text-foreground; */
   }
 }

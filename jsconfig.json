@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",                  // Project root as base for module resolution
+    "paths": {
+      "@/*": ["src/*"]              // '@/' acts as shortcut to 'src' folder
+    },
+    "jsx": "react",                  // Enable JSX syntax support in JS files
+    "checkJs": false                 // Disable type-checking for JS files
+  },
+  "include": ["src"]                 // Only include files from the 'src' folder
+}
