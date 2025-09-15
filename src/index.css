@@ -1,147 +1,90 @@
-/* Import Tailwind base styles */
+/* ===============================
+   Tailwind Base Imports
+   =============================== */
 @import "tailwindcss";
-/* Import animations from tailwind-animate-css plugin */
+
+/* ===============================
+   Third-party Animations
+   =============================== */
 @import "tw-animate-css";
 
-/* Custom variant for dark mode */
-@custom-variant dark (&:is(.dark *));
-
+/* ===============================
+   Google Fonts
+   =============================== */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
+/* ===============================
+   Local Fonts
+   =============================== */
 @font-face {
   font-family: "Agrandir Regular";
   src: url("/fonts/Agrandir-Regular.otf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
-
 
 @font-face {
   font-family: "Helvetica Regular";
   src: url("/fonts/Helvetica.ttf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
 
 @font-face {
   font-family: "The Seasons Bold";
   src: url("/fonts/Fontspring-DEMO-theseasons-bd.otf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
 
 @font-face {
   font-family: "29lt Zawi Bold";
   src: url("/fonts/29lt-zawi-bold.otf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
 
 @font-face {
   font-family: "NeueMachina Ultrabold";
   src: url("/fonts/NeueMachina-Ultrabold.otf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
 
 @font-face {
   font-family:"Rig BoldHalftone";
   src: url("/fonts/Rig-BoldHalftone.ttf") format("opentype");
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
   display: swap;
 }
 
-/* fonts */
-.font-agrandir {
-  font-family: "Agrandir Regular", sans-serif;
-}
+/* ===============================
+   Utility Classes for Fonts
+   =============================== */
+.font-agrandir { font-family: "Agrandir Regular", sans-serif; }
+.font-dm { font-family: "DM Sans", sans-serif; }
+.font-helvetica { font-family: "Helvetica Regular", sans-serif; }
+.font-seasons-bold { font-family: "The Seasons Bold", sans-serif; }
+.font-playfair-display { font-family: "Playfair Display", serif; }
+.font-poppins { font-family: "Poppins", sans-serif; }
+.font-zawi-bold { font-family: "29lt Zawi Bold", sans-serif; }
+.font-neue-ultrabold { font-family: "NeueMachina Ultrabold", sans-serif; }
+.font-rig-bold { font-family: "Rig BoldHalftone", sans-serif; }
 
-.font-dm-sarif {
-  font-family: "DM Sans";
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
-}
-.font-Helvetica {
-  font-family: "Helvetica Regular";
-}
-.font-seasons-bold {
-  font-family: "The Seasons Bold";
-}
-
-.font-playfair-display {
-  font-family: "Playfair Display";
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
-}
-
-.font-poppins {
-  font-family: "Poppins";
-  font-optical-sizing: auto;
-  font-weight: auto;
-  font-style: auto;
-}
-
-.font-zawi-bold {
-  font-family: "29lt Zawi Bold";
-}
-
-.font-neueMachina-ultraBold {
-  font-family: "NeueMachina Ultrabold";
-}
-
-.font-rig-boldHalftone {
-  font-family: "Rig BoldHalftone";
-}
-
-
-
-
-/* Root variables: light theme */
+/* ===============================
+   Light / Dark Theme Variables
+   =============================== */
 :root {
-  --color-background: #f1f1f1;
-  --color-foreground: #000000;
-  --color-primary: oklch(0.6033 0.2146 269.58);
+  --background-color: #f1f1f1;
+  --foreground-color: #000000;
+  --primary-color: oklch(0.6033 0.2146 269.58);
 }
 
-/* Dark mode overrides */
 .dark {
-  --color-background: oklch(0.2 0 0);
-  --color-foreground: #f1f1f1;;
-  --color-primary: oklch(0.6033 0.2146 269.58);
+  --background-color: oklch(0.2 0 0);
+  --foreground-color: #f1f1f1;
+  --primary-color: oklch(0.6033 0.2146 269.58);
 }
 
-/* Theme mapping */
-@theme inline {
-  --background-color: var(--color-background);
-  --foreground-color: var(--color-foreground);
-  --primary-color: var(--color-primary);
-}
-
-/* Base layer */
-@layer base {
-  * {
-    /* @apply border-border outline-ring/50; */
-  }
-  body {
-    /* @apply bg-background text-foreground; */
-  }
+/* ===============================
+   Base Styles
+   =============================== */
+html {
+  transition: background-color 0.3s, color 0.3s;
 }

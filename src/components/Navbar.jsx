@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes, FaSearch } from "react-icons/fa";
 import { createPortal } from "react-dom";
 import { Button } from "./ui/button";
+import { useModeAnimation } from "react-theme-switch-animation";
+import { FiMoon, FiSun } from "react-icons/fi";
 
 // Navbar Component
 // - Fixed top navigation bar
@@ -10,7 +12,7 @@ import { Button } from "./ui/button";
 // Change the code as required
 
 export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const { ref, toggleSwitchTheme, isDarkMode } = useModeAnimation();
   const closeMenu = () => setIsMenuOpen(false);
 
   const navData = [
@@ -24,12 +26,12 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
   return (
     <>
       {/* Top bar */}
-      <nav className="sticky top-0 z-50 bg-[var(--primary-color)]/38 w-full shadow-md">
+      <nav className="sticky top-0 z-50 bg-[var(--primary-color)]/38 w-full">
         <div className="max-w-screen-xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
           {/* Hamburger */}
           <div className="flex items-center gap-4">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden"
               aria-label="Open menu"
             >
@@ -57,12 +59,29 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
             ))}
           </ul>
 
-          {/* Join Button */}
-          <Button variant="default" size="lg" asChild>
-            <Link to={`/${navData[navData.length - 1].path}`}>
-              {navData[navData.length - 1].title}
-            </Link>
-          </Button>
+          {/* Join and Theme Toggle Buttons */}
+          <div className="flex items-center gap-4">
+            {/* Theme Toggle Button */}
+            <button
+              ref={ref}
+              onClick={toggleSwitchTheme}
+              className="text-[var(--background-color)] flex items-center justify-center transition-all hover:scale-110 cursor-pointer"
+              aria-label="Toggle Theme"
+            >
+              {isDarkMode ? (
+                <FiMoon className="w-6 h-6" />
+              ) : (
+                <FiSun className="w-6 h-6" />
+              )}
+            </button>
+
+            {/* Join Button */}
+            <Button variant="default" size="lg" asChild>
+              <Link to={`/${navData[navData.length - 1].path}`}>
+                {navData[navData.length - 1].title}
+              </Link>
+            </Button>
+          </div>
         </div>
       </nav>
 
