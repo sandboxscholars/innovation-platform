@@ -10,7 +10,7 @@ import Newsletter from '../../sections/Home/Newsletter';
 
 const Home = () => {
   return (
-    <>
+    <div className='bg-[var(--background-color)]'>
     {/* Hero Section – main tagline + CTA */}
     <HeroSection />
 
@@ -25,7 +25,7 @@ const Home = () => {
 
     {/* Newsletter Section – call-to-action to subscribe */}
     <Newsletter />
-  </>
+  </div>
   );
 };
 
