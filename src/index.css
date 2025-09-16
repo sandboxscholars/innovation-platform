@@ -53,6 +53,11 @@
   src: url("/fonts/Rig-BoldHalftone.ttf") format("opentype");
   display: swap;
 }
+@font-face {
+  font-family:"PlayFaire Bold Italic";
+  src: url("/public/fonts/PlayfairDisplay-BoldItalic.ttf") format("opentype");
+  display: swap;
+}
 
 /* ===============================
    Utility Classes for Fonts
@@ -61,7 +66,7 @@
 .font-dm { font-family: "DM Sans", sans-serif; }
 .font-helvetica { font-family: "Helvetica Regular", sans-serif; }
 .font-seasons-bold { font-family: "The Seasons Bold", sans-serif; }
-.font-playfair-display { font-family: "Playfair Display", serif; }
+.font-playfair-boldItalic { font-family: "PlayFaire Bold Italic", serif; }
 .font-poppins { font-family: "Poppins", sans-serif; }
 .font-zawi-bold { font-family: "29lt Zawi Bold", sans-serif; }
 .font-neue-ultrabold { font-family: "NeueMachina Ultrabold", sans-serif; }
@@ -74,12 +79,15 @@
   --background-color: #f1f1f1;
   --foreground-color: #000000;
   --primary-color: oklch(0.6033 0.2146 269.58);
+  --border-color:#070404;
+  --secondary-background: #ffffff;
 }
 
 .dark {
   --background-color: oklch(0.2 0 0);
   --foreground-color: #f1f1f1;
   --primary-color: oklch(0.6033 0.2146 269.58);
+  --border-color:#f1f1f1;
 }
 
 /* ===============================
