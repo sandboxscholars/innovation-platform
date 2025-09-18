@@ -46,7 +46,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
           </div>
 
           {/* Desktop Links */}
-          <ul className="hidden md:flex items-center space-x-6 flex-1 justify-evenly lg:mx-[7%]">
+          <ul className="hidden md:flex items-center space-x-6 flex-1 justify-evenly md:mx-[7%]">
             {navData.slice(0, -1).map((nav) => (
               <li key={nav.id}>
                 <Link
@@ -76,7 +76,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
             </button>
 
             {/* Join Button */}
-            <Button variant="default" size="lg" asChild>
+            <Button variant="default" size="md" asChild>
               <Link to={`/${navData[navData.length - 1].path}`}>
                 {navData[navData.length - 1].title}
               </Link>
