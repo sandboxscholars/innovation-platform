@@ -69,7 +69,7 @@
 .font-playfair-boldItalic { font-family: "PlayFaire Bold Italic", serif; }
 .font-poppins { font-family: "Poppins", sans-serif; }
 .font-zawi-bold { font-family: "29lt Zawi Bold", sans-serif; }
-.font-neue-ultrabold { font-family: "NeueMachina Ultrabold", sans-serif; }
+.font-neue-ultraBold { font-family: "NeueMachina Ultrabold", sans-serif; }
 .font-rig-bold { font-family: "Rig BoldHalftone", sans-serif; }
 
 /* ===============================
@@ -77,7 +77,7 @@
    =============================== */
 :root {
   --background-color: #f1f1f1;
-  --foreground-color: #000000;
+  --foreground-color: oklch(0 0 0);
   --primary-color: oklch(0.6033 0.2146 269.58);
   --border-color:#070404;
   --secondary-background: #ffffff;
