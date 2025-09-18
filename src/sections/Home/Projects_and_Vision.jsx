@@ -30,14 +30,14 @@ export default function Projects_and_Vision() {
           {/* Left Column */}
           <div className="space-y-8 mx-auto">
             {/* Main Heading */}
-            <div className="space-y-6">
+            <div className="space-y-6 text-[var(--foreground-color)]">
               <h1 className="md:text-5xl font-neue-ultraBold leading-13 md:mb-12">
                 Our <span className="underline">Projects</span>
                 <br />
                 and <span className="underline">Vision</span>
               </h1>
 
-              <p className="text-lg text-[var(--color-foreground)] max-w-md">
+              <p className="text-lg max-w-md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -46,7 +46,7 @@ export default function Projects_and_Vision() {
             </div>
 
             {/* Specialties Card */}
-            <div className="bg-[var(--primary-color)]/17 max-w-md rounded-lg p-8 relative">
+            <div className="bg-[var(--primary-color)]/17 text-[var(--foreground-color)] max-w-md rounded-lg p-8 relative">
               {/* Specialties heading */}
               <h3 className="absolute top-3 end-3 text-lg px-7 py-2 rounded-sm bg-[var(--primary-color)]/20">
                 Specialties
@@ -60,13 +60,13 @@ export default function Projects_and_Vision() {
                   <li>ex ea commodo consequat.</li>
                   <li>ex ea commodo consequat.</li>
                 </ul>
-                <GoArrowRight className="absolute right-12 top-7/8 -translate-y-1/2 text-[var(--foreground-color)] w-10 h-10 cursor-pointer" />
+                <GoArrowRight className="absolute right-12 top-7/8 -translate-y-1/2 w-10 h-10 cursor-pointer" />
               </div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-6 mx-auto">
+          <div className="space-y-6 mx-auto text-[var(--foreground-color)]">
             {projects.map(({ id, title, description }) => (
               <div className="grid grid-cols-16 bg-[var(--primary-color)]/35 max-w-md rounded-lg ps-2 pe-6 py-8">
                 <p className="col-span-4 font-rig-bold text-8xl m-auto">{id}</p>
@@ -75,7 +75,7 @@ export default function Projects_and_Vision() {
                   <p className="text-[17px]">
                     {description}
                   </p>
-                  <GoArrowRight className="absolute right-0 top-auto -translate-y-1/2 text-[var(--foreground-color)] w-10 h-10 cursor-pointer" />
+                  <GoArrowRight className="absolute right-0 top-auto -translate-y-1/2 w-10 h-10 cursor-pointer" />
                 </div>
               </div>
             ))}
