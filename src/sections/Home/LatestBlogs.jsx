@@ -41,7 +41,7 @@ function LatestBlogs() {
     },
   ];
   return (
-    <section className="relative py-20 px-8 bg-[var(--background-color)] text-[var(--foreground-color)]">
+    <section className="relative md:py-20 px-8 bg-[var(--background-color)] text-[var(--foreground-color)]">
       {/* Decorative Search Icon */}
       <div className="">
         <div className="">

@@ -87,6 +87,7 @@
   --primary-color: oklch(0.6033 0.2146 269.58);
   --border-color:#070404;
   --secondary-background: #ffffff;
+  --border-color: gray;
 }
 
 .dark {

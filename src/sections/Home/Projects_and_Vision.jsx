@@ -24,7 +24,7 @@ export default function Projects_and_Vision() {
     },
   ];
   return (
-    <div className="my-10 min-h-screen bg-[var(--background-color)] px-8 py-12">
+    <div className="md:py-20 min-h-screen bg-[var(--background-color)] px-8 py-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 items-center md:grid-cols-2 gap-16">
           {/* Left Column */}
