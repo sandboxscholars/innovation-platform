@@ -7,6 +7,7 @@ import VisitClub from '../../sections/Home/VisitClub';
 import Newsletter from '../../sections/Home/Newsletter';
 import KeyPoints from '@/sections/Home/KeyPoints';
 import Projects_and_Vision from '@/sections/Home/Projects_and_Vision';
+import Workflow from '@/sections/Home/Workflow';
 
 // Landing Page with all sections combined
 
@@ -27,6 +28,9 @@ const Home = () => {
 
     {/* About Us Section – short description of the organization */}
     <AboutUs />
+
+    {/* About Us Section – short description of the organization */}
+    <Workflow/>
 
     {/* Visit Club Section – showcase visit/event highlight */}
     <VisitClub />
