@@ -6,6 +6,12 @@
   --color-brandPrimary: #12418d;       /* Deep blue */
   --color-brandSecondary: #2f84a9;     /* Medium blue */
   --color-brandTertiary: #8ecaef;      /* Light blue */
+
+  --color-primary: #C9DAF8;
+  --color-background: #F5F6FA;
+  --color-foreground: #222222;
+  --color-muted: #4B5563;
+  --color-accent: #1D4ED8;
   
   /* Accent colors */
   --color-accentPrimary: #ef601e;      /* Vibrant orange */
