@@ -1,6 +1,6 @@
 // NOTE for Developers:
 // - This component renders two types of sections based on the "sections" array.
-//   1. Daily Scholar section (type === "daily")
+//   1. sandbox Scholar section (type === "sandbox")
 //   2. Regular KeyPoint section (type === "point")
 // - Comments have been added in the appropriate places throughout the file.
 // - If you need to update or add comments in the future, please follow the existing pattern
@@ -10,12 +10,12 @@ import React from "react";
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 
 export default function KeyPoints() {
-  // Section data (Daily + KeyPoints)
+  // Section data (sandbox + KeyPoints)
   const sections = [
     {
-      id: "daily", // Special Daily Scholar section
-      type: "daily",
-      title: "The Daily Scholars",
+      id: "sandbox", // Special sandbox Scholar section
+      type: "sandbox",
+      title: "Sandbox Scholars",
       subtitle: "STUDENT INNOVATION NETWORK...",
       content1:
         "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
@@ -59,11 +59,11 @@ export default function KeyPoints() {
       {/* Parent grid layout: single column on mobile, two columns on desktop */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
         {sections.map((item) =>
-          item.type === "daily" ? (
-            // Daily Scholar Layout
+          item.type === "sandbox" ? (
+            // sandbox Scholar Layout
             <div
               key={item.id}
-              className="bg-[var(--secondary-background)] border-y-3 border-e-3 border-[var(--border-color)] px-5 rounded-tr-sm rounded-br-sm -mt-30 max-w-[85%] mx-auto"
+              className="bg-[var(--secondary-background)] border-y-3 border-e-3 border-[var(--border-color)] px-5 rounded-tr-sm rounded-br-sm -mt-[20%] max-w-[85%] mx-auto"
             >
               {/* Title */}
               <p className="font-playfair-boldItalic text-5xl py-2">
@@ -110,13 +110,13 @@ export default function KeyPoints() {
             // Regular KeyPoint Layout
             <div
               key={item.id}
-              className="flex justify-center space-x-8 items-center bg-[var(--primary-color)]/15 rounded-4xl px-6 py-8 max-w-[85%] mx-auto mt-auto"
+              className="flex justify-center space-x-6 items-center bg-[var(--primary-color)]/15 rounded-4xl px-6 py-8 max-w-[85%] mx-auto mt-auto"
             >
               {/* KeyPoint icon */}
               <img
-                src={`/images/${item.img_name}.png`}
+                src={`/images/${item.img_name}.svg`}
                 alt={item.img_name}
-                className="w-24 h-24 object-contain"
+                className="w-24 object-contain"
               />
 
               {/* KeyPoint text content */}

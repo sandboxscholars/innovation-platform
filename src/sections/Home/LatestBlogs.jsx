@@ -55,7 +55,7 @@ function LatestBlogs() {
         <div className="mb-6">
           <div className="flex items-center mb-8">
             <div className="flex-1  max-w-[29.3rem]">
-              <h2 className="text-5xl font-bold underline">Our Blogs</h2>
+              <h2 className="text-5xl font-bold underline pb-3">Our Blogs</h2>
 
               <p className="text-[17px] my-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

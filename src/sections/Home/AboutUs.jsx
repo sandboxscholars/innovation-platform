@@ -73,13 +73,13 @@ function AboutUs() {
 
                 <div className="flex justify-evenly items-center">
                   <img
-                    className="w-24 h-24 object-contain"
-                    src="/images/gift-card.png"
+                    className=" object-contain"
+                    src="/images/gift-card.svg"
                     alt="Gift Card"
                   />
                   <img
                     className="w-80 object-contain"
-                    src="/images/zigzag-line.png"
+                    src="/images/zigzag-line.svg"
                     alt="Zigzag Line"
                   />
                 </div>

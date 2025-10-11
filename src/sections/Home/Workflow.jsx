@@ -45,14 +45,14 @@ export default function Workflow() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center text-center mb-18 relative">
-          <img className="w-[160px]" src="/images/paper.png" alt="" />
-          <h1 className="text-4xl md:text-5xl font-semibold mb-4 underline decoration-3 underline-offset-8">
+          <img className="w-[160px]" src="/images/paper.svg" alt="" />
+          <h1 className="text-4xl md:text-5xl font-semibold underline decoration-3 underline-offset-8">
             Our Workflow
           </h1>
 
           <div>
-            <img className="" src="/images/question-sign.png" alt="" />
-              <img src="/images/watch.png" alt="" />
+            <img className="" src="/images/question-sign.svg" alt="" />
+              <img src="/images/watch.svg" alt="" />
           </div>
 
 
