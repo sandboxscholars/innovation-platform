@@ -2,21 +2,21 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-screen-xl mx-auto px-4 py-12 flex flex-col md:flex-row items-center md:items-start justify-between md:gap-6">
+    <section className="max-w-screen-xl mx-auto md:px-4 py-6 md:py-12 flex flex-col md:flex-row items-center md:items-start justify-between md:gap-6">
       
       {/* Left Side - Headings with lights */}
       <div className="flex-1 w-full flex flex-col items-center md:items-start">
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between w-full gap-6 md:gap-10">
+        <div className="sm:flex sm:flex-col md:flex-row items-center md:items-start justify-center md:justify-between w-full gap-6 md:gap-10">
           
           {/* Lights */}
           <img
             src="/images/lights.svg"
             alt="Lights"
-            className="w-32 md:w-56 -mt-4 md:-mt-13"
+            className="w-32 md:w-56 -mt-4 md:-mt-13 hidden md:block"
           />
 
           {/* Headings */}
-          <div className="text-[var(--foreground-color)] text-center md:text-right md:space-y-1">
+          <div className="text-[var(--foreground-color)] md:text-right md:space-y-1">
             <p className="font-semibold text-2xl md:text-4xl">Experiment.</p>
             <p className="font-helvetica text-2xl md:text-4xl">Lead.</p>
             <p className="font-agrandir text-2xl md:text-4xl">Create.</p>
@@ -26,8 +26,8 @@ export default function HeroSection() {
       </div>
 
       {/* Right Side - Image + Description */}
-      <div className="flex-1 w-full flex flex-col items-center md:items-start">
-        <div className="relative w-full flex flex-col sm:flex-row sm:items-start">
+      <div className="flex-1 w-full hidden md:flex flex-col items-center md:items-start">
+        <div className="relative w-full flex flex-col md:flex-row md:items-start">
           
           {/* Ribbon*/}
           <img

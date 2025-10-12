@@ -76,7 +76,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
             </button>
 
             {/* Join Button */}
-            <Button variant="default" size="md" asChild>
+            <Button variant="default" size="pilled_rounded" asChild>
               <Link to={`/${navData[navData.length - 1].path}`}>
                 {navData[navData.length - 1].title}
               </Link>

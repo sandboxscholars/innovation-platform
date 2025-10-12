@@ -14,7 +14,7 @@ import Contributors from '@/sections/Home/Contributors';
 
 const Home = () => {
   return (
-    <div className='bg-[var(--background-color)]'>
+    <div className='bg-[var(--secondary-background)] md:bg-[var(--background-color)] text-base'>
     {/* Hero Section – main tagline + CTA */}
     <HeroSection />
 

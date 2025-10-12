@@ -35,7 +35,7 @@ const teams = [
 
 export default function Contributors() {
   return (
-    <section className="py-16 px-6">
+    <section className="py-6 px-6">
       {/* Heading */}
       <div className="max-w-6xl text-[var(--foreground-color)] mx-auto mb-12">
         <h2 className="text-5xl font-neue-ultraBold leading-13 font-bold mb-4 md:mb-6">
