@@ -1,103 +1,96 @@
+import React from "react";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+export default function HomePage() {
+  return (
+    <main
+      className="font-sans bg-[#a4c2db] text-black min-h-screen p-8 lg:p-16 flex items-center justify-center"
+    >
+      <div className="w-full max-w-7xl">
+        {/* Headings */}
+        <div className="sm:grid sm:grid-cols-3 mb-2 sm:mb-0 sm:items-center">
+          <h1
+            className="text-5xl md:text-6xl lg:text-7xl font-semibold sm:font-bold col-span-2"
+            aria-label="Hello there!"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            Hello there!
+          </h1>
+          {/* Red X Icon (SVG syntax corrected and shadow simplified) */}
+          <div className="hidden sm:flex items-center justify-end w-15 h-15 md:w-23 md:h-23 lg:w-24 lg:h-24 flex-shrink-0">
+            <svg
+              className="w-full h-full text-red-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true" 
+            >
+              <defs>
+                <filter id="shadow">
+                  <feDropShadow 
+                    dx="3"
+                    dy="3"
+                    stdDeviation="2"
+                    floodColor="rgba(0,0,0,0.3)"
+                  />
+                </filter>
+              </defs>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+                filter="url(#shadow)"
+              />
+            </svg>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold md:font-bold leading-tight mb-2">
+          Looks like you are a bit too early...
+          <br />
+          This webpage is under construction.
+        </h2>
+        <article className="text-lg sm:text-xl font-medium max-w-3xl mb-10 md:mb-0 space-y-4">
+          <p>
+            We are still working hard on polishing our webpage. Just a few final
+            touches and our online presence is all set for our audience!
+          </p>
+          <p>Have a great day!</p>
+        </article>
+        <div className="md:grid md:grid-cols-2 lg:grid-cols-3 items-center gap-8">
+          {/* Contact Box */}
+          <div className="p-5 border border-black max-w-xs text-lg rounded-lg shadow-lg bg-white/10 relative">
+            <p className="mb-1">If any queries</p>
+            <a
+              href="mailto:sandboxscholars.team@gmail.com"
+              className="text-lg font-medium sm:font-bold underline hover:text-red-700 transition duration-150"
+              aria-label="Contact Us via Email: sandboxscholars.team@gmail.com"
+            >
+              Contact Us
+            </a>
+            <div className="mt-4 pt-4 pb-6 border-t border-black/30">
+              <p className="text-lg sm:text-xl font-medium sm:font-bold mb-1">
+                Sandbox Scholars team
+              </p>
+              <p className="text-base text-gray-700">
+                sandboxscholars.team@gmail.com
+              </p>
+            </div>
+          </div>
+          <div className="w-full h-80 lg:col-span-2 hidden md:block relative">
+            <Image
+              src="/under-construction.png"
+              fill
+              className="object-contain md:mx-auto" 
+              alt="An illustration of an under construction sign and a worker"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px" 
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
