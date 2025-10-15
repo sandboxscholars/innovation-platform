@@ -1,21 +1,13 @@
-// src/app/layout.js
-
-import './globals.css';
-import { DM_Sans } from "next/font/google";
-
-// 1. Initialize DM Sans here
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans", // Define the CSS variable
-});
+import "./globals.css";
+export const metadata = {
+  title: "Sandbox Scholars",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/* 2. Apply the CSS variable to the body tag */}
-      <body className={`${dmSans.variable} font-sans`}> 
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
