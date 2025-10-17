@@ -83,7 +83,7 @@ export default function HomePage() {
             <Image
               src="/under-construction.png"
               fill
-              className="object-contain md:mx-auto" 
+              className="object-contain max-w-[80%] max-h-[80%] lg:max-w-[100%] lg:max-h-[100%] md:mx-auto" 
               alt="An illustration of an under construction sign and a worker"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px" 
               priority
