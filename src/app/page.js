@@ -1,12 +1,9 @@
 import React from "react";
 import Image from "next/image";
 
-
 export default function HomePage() {
   return (
-    <main
-      className="font-sans bg-[#a4c2db] text-black min-h-screen p-8 lg:p-16 flex items-center justify-center"
-    >
+    <main className="font-sans bg-[#a4c2db] text-black min-h-screen p-8 lg:p-16 flex items-center justify-center">
       <div className="w-full max-w-7xl">
         {/* Headings */}
         <div className="sm:grid sm:grid-cols-3 mb-2 sm:mb-0 sm:items-center">
@@ -25,11 +22,11 @@ export default function HomePage() {
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
-              aria-hidden="true" 
+              aria-hidden="true"
             >
               <defs>
                 <filter id="shadow">
-                  <feDropShadow 
+                  <feDropShadow
                     dx="3"
                     dy="3"
                     stdDeviation="2"
@@ -83,9 +80,9 @@ export default function HomePage() {
             <Image
               src="/under-construction.png"
               fill
-              className="object-contain max-w-[80%] max-h-[80%] lg:max-w-[100%] lg:max-h-[100%] md:mx-auto" 
+              className="object-contain max-w-[80%] max-h-[80%] lg:max-w-[100%] lg:max-h-[100%] md:mx-auto"
               alt="An illustration of an under construction sign and a worker"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px" 
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               priority
             />
           </div>
