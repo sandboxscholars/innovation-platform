@@ -2,11 +2,11 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section className="max-w-screen-xl mx-auto md:px-4 py-6 md:py-12 flex flex-col md:flex-row items-center md:items-start justify-between md:gap-6">
+    <section className="max-w-screen-xl mx-auto md:px-4 pt-6 md:py-12 flex flex-col md:flex-row items-center md:items-start justify-between md:gap-6">
       
       {/* Left Side - Headings with lights */}
       <div className="flex-1 w-full flex flex-col items-center md:items-start">
-        <div className="sm:flex sm:flex-col md:flex-row items-center md:items-start justify-center md:justify-between w-full gap-6 md:gap-10">
+        <div className="sm:flex sm:flex-col md:flex-row md:items-start md:justify-between w-full gap-4 md:gap-7 lg:gap-10">
           
           {/* Lights */}
           <img
@@ -16,11 +16,16 @@ export default function HeroSection() {
           />
 
           {/* Headings */}
-          <div className="text-[var(--foreground-color)] md:text-right md:space-y-1">
-            <p className="font-semibold text-2xl md:text-4xl">Experiment.</p>
-            <p className="font-helvetica text-2xl md:text-4xl">Lead.</p>
-            <p className="font-agrandir text-2xl md:text-4xl">Create.</p>
-            <u className="font-seasons-bold text-2xl md:text-4xl">Together.</u>
+          <div className="flex gap-x-2">
+            <div className="md:hidden w-[30px] border-y-2 border-r-2 border-dashed">
+
+            </div>
+            <div className="text-[var(--foreground-color)] md:text-right md:space-y-1 text-2xl sm:text-3xl lg:text-4xl py-[10px] md:py-0">
+            <p className="font-semibold">Experiment.</p>
+            <p className="font-helvetica">Lead.</p>
+            <p className="font-agrandir">Create.</p>
+            <u className="font-seasons-bold">Together.</u>
+          </div>
           </div>
         </div>
       </div>
@@ -33,7 +38,7 @@ export default function HeroSection() {
           <img
             src="/images/ribbon.svg"
             alt="Ribbon design"
-            className="md:w-18 md:mr-6 md:-mt-25"
+            className="md:w-[60px] lg:w-[70px] md:mr-6 md:-mt-25"
           />
 
           {/* Image + Description */}

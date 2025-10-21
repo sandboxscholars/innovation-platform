@@ -6,9 +6,9 @@ function AboutUs() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 gap-y-6 sm:gap-y-16 items-center">
           {/* About Us Section */}
-          <div className="sm:grid sm:grid-cols-10 items-center">
+          <div className="md:grid md:grid-cols-10 items-center">
             {/* Text */}
-            <div className="sm:space-y-6 col-span-7">
+            <div className="md:space-y-6 col-span-7">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-2 sm:mb-4 underline">
                 About us!
               </h2>
@@ -48,14 +48,14 @@ function AboutUs() {
           </div>
 
           {/* Why Join Us Section */}
-          <div className="sm:grid sm:grid-cols-10 items-center">
+          <div className="md:grid md:grid-cols-10 items-center">
             {/* Half Circle (Left Side) */}
-            <div className="w-[120px] h-52 bg-[var(--primary-color)]/60 rounded-r-full col-span-1 me-auto hidden md:block"></div>
+            <div className="w-[120px] h-52 bg-[var(--primary-color)]/60 rounded-r-full col-span-1 md:col-span-2 lg:col-span-1 me-auto hidden md:block"></div>
 
-            <div className="md:grid md:grid-cols-6 md:col-span-9 items-center gap-6">
+            <div className="md:grid md:grid-cols-6 col-span-8 items-center gap-6">
               {/* Dotted Sign */}
               <div
-                className="hidden md:grid md:grid-cols-6 md:grid-rows-8 md:gap-x-7 md:gap-y-8 m-auto md:col-span-2"
+                className="hidden xl:grid lg:grid-cols-6 lg:grid-rows-8 lg:gap-x-7 lg:gap-y-8 m-auto lg:col-span-2"
                 aria-hidden="true"
               >
                 {Array.from({ length: 48 }).map((_, i) => (
@@ -67,12 +67,12 @@ function AboutUs() {
               </div>
 
               {/* Content */}
-              <div className="col-span-4">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold underline mb-2 sm:mb-4">
+              <div className="md:col-span-7 lg:col-span-6 xl:col-span-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl text-end font-semibold underline mb-2 sm:mb-4">
                   Why Join us?
                 </h2>
 
-                <p className="sm:text-lg text-[var(--foreground-color)]/80 md:leading-relaxed mb-8">
+                <p className="sm:text-lg text-[var(--foreground-color)]/80 md:leading-relaxed mb-8 text-end">
                   We are moving forward with a bigger vision and greater
                   opportunities ahead. You can contribute to this organization
                   to gain hands-on experience as well as leadership qualities.

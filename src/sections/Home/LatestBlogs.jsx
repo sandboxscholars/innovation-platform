@@ -43,7 +43,7 @@ function LatestBlogs() {
   return (
     <section className="relative pt-6 pb-8 md:py-20 px-8 text-[var(--foreground-color)] sm:border-none border-t-3 border-dashed">
       {/* Decorative Search Icon */}
-      <div className="hidden sm:block">
+      <div className="hidden xl:block">
         <div className="">
           <div className="w-40 h-40 border-s-4 border-t-4 border-b-4 border-dashed border-[var(--foreground-color)]/70 rounded-l-full absolute top-[7.3%] right-25"></div>
           <GoSearch className="w-30 h-30 text-[var(--foreground-color)]/70 absolute top-[10%] right-28" />
@@ -55,7 +55,7 @@ function LatestBlogs() {
         <div className="mb-6">
           <div className="sm:flex sm:items-center mb-8">
             <div className="max-w-[29.3rem]">
-              <h2 className="text-3xl md:text-5xl font-semibold sm:font-bold underline sm:pb-3">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold sm:font-bold underline sm:pb-3">
                 Our Blogs
               </h2>
 
@@ -76,7 +76,7 @@ function LatestBlogs() {
             </div>
 
             {/* View All Button */}
-            <div className="p-4 sm:p-6 rounded-2xl flex items-center justify-between mx-auto">
+            <div className="p-4 sm:p-6 rounded-2xl hidden md:flex items-center justify-between mx-auto">
               <div className="sm:max-w-[300px] bg-[var(--primary-color)]/45 px-6 sm:px-8 py-4 rounded-lg">
                 <div className="flex items-center justify-between">
                   <Button
@@ -88,7 +88,7 @@ function LatestBlogs() {
                   </Button>
                   <GoArrowRight className="w-10 h-10 " />
                 </div>
-                <p className="text-base font-medium opacity-90 mt-4">
+                <p className="text-base font-medium opacity-90 mt-4 max-w-sm mx-auto">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod
                 </p>
@@ -98,7 +98,7 @@ function LatestBlogs() {
         </div>
 
         {/* Blog Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:gap-x-8 gap-y-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 sm:gap-x-8 md:gap-15 lg:gap-15 xl:gap-8 gap-y-10 max-w-md md:max-w-[100%] lg:max-w-[90%] xl:max-w-full mx-auto">
           {blogPosts.map((post, index) => {
             // Helper function for truncation
             const truncate = (text, limit) => {

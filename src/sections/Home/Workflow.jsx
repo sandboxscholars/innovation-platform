@@ -50,7 +50,7 @@ export default function Workflow() {
             src="/images/paper.svg"
             alt=""
           />
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold underline px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-semibold underline px-4 sm:px-6">
             Our Workflow
           </h1>
 
