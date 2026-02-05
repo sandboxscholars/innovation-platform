@@ -6,6 +6,11 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer';
 
+import About from './pages/About/About';
+import Blogs from './pages/Blogs/Blogs';
+import Projects from './pages/Projects/projects';
+
+
 
 //- Global wrapper/Layout for all pages
 // - Always displays the Navbar at the top and Footer at the bottom for all pages
@@ -53,6 +58,9 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/projects" element={<Projects />} />
           {/* Add more routes as needed(More Pages e.g. Blogs, Clubs, About Us etc) */}
         </Route>
       </Routes>
