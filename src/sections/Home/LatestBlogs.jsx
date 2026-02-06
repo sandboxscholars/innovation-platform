@@ -3,6 +3,7 @@ import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { GoArrowRight, GoSearch } from "react-icons/go";
 import { FiCalendar, FiUser, FiClock, FiTag } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 function LatestBlogs() {
   const blogPosts = [
@@ -144,10 +145,10 @@ function LatestBlogs() {
                 <span className="text-darkCool font-medium">
                   Want to contribute your own article?
                 </span>
-                <button className="inline-flex items-center gap-2 px-6 py-2 bg-brandPrimary text-pureWhite rounded-full font-semibold hover:bg-brandSecondary transition-colors">
+                <Link to="/submit-articles" className="inline-flex items-center gap-2 px-6 py-2 bg-brandPrimary text-pureWhite rounded-full font-semibold hover:bg-brandSecondary transition-colors">
                   Submit Article
                   <FaArrowRight className="w-4 h-4" />
-                </button>
+                </Link>
               </div>
             </div>
           </div>

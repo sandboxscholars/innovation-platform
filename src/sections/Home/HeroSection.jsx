@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { FiArrowRight, FiZap, FiUsers, FiTarget, FiTrendingUp } from "react-icons/fi";
+import { Link } from "react-router-dom";
+
 
 export default function HeroSection() {
   const [activeCard, setActiveCard] = useState(0);
@@ -78,14 +80,14 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="group inline-flex items-center justify-center gap-3 px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-600 hover:shadow-lg transition-all duration-300">
-                Join Our Community
+              <Link to="/join-us" className="group inline-flex items-center justify-center gap-3 px-6 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-600 hover:shadow-lg transition-all duration-300">
+                  Join Our Community
                 <FiArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-              <button className="group inline-flex items-center justify-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 text-gray-900 rounded-lg font-semibold hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+              </Link>
+              <Link to="/projects" className="group inline-flex items-center justify-center gap-3 px-6 py-3 bg-white border-2 border-gray-200 text-gray-900 rounded-lg font-semibold hover:border-blue-300 hover:shadow-lg transition-all duration-300">
                 Explore Projects
                 <FiTarget className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              </button>
+              </Link>
             </div>
 
             {/* Stats */}

@@ -1,7 +1,8 @@
 import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { FiCode, FiUsers, FiBookOpen, FiTarget } from "react-icons/fi";
-
+import { Link } from "react-router-dom";
+ 
 export default function Projects_and_Vision() {
   const projects = [
     {
@@ -162,10 +163,9 @@ export default function Projects_and_Vision() {
 
             {/* CTA Button */}
             <div className="text-center pt-4">
-              <button className="inline-flex items-center gap-3 px-8 py-4 bg-accentPrimary text-pureWhite rounded-xl font-semibold hover:bg-accentSecondary hover:shadow-lg transition-all">
-                View All Projects
-                <GoArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <Link to="/projects" className="group inline-flex items-center gap-3 px-8 py-4 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-accentSecondary hover:shadow-lg transition-all">
+                Navigate to the <b>Projects</b> tab to check all of our projects
+            </Link>
             </div>
           </div>
         </div>

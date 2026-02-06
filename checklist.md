@@ -16,7 +16,9 @@
 - Join us 🟥
 
 ## Features:
-- Dark mode red
+- Dark mode ⚫ FAILED
+- Documentary style note (Hundreds of them) for all projects & Blogs 
+- 
 
 
 ## Internal:

@@ -139,7 +139,7 @@ export default function Contributors() {
                   <p className="text-darkCool">Key members driving our current initiatives</p>
                 </div>
                 <button className="px-6 py-3 bg-brandPrimary text-pureWhite rounded-xl font-medium hover:bg-brandSecondary transition-colors whitespace-nowrap">
-                  Join Our Team
+                  People who made this possible
                 </button>
               </div>
               
@@ -200,7 +200,7 @@ export default function Contributors() {
                 <h4 className="text-lg font-bold text-deepCharcoal mb-2">More Innovators Joining</h4>
                 <p className="text-darkCool mb-4">We're growing our community daily with passionate students</p>
                 <button className="text-brandPrimary font-medium hover:text-brandSecondary">
-                  Explore All Contributors →
+                  Navigate to the <b>About us</b> tab to explore all our contributors
                 </button>
               </div>
             </div>
