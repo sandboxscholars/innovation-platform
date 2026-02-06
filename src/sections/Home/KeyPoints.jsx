@@ -42,8 +42,9 @@ export default function KeyPoints() {
     },
   ];
 
-  return (
-    <div className="max-w-6xl mx-auto mb-12 md:mb-16 px-4 md:px-6">
+  return ( 
+  <section className="bg-paperWhite pb-4">
+    <div className="max-w-7xl mx-auto mb-12 md:mb-16 px-4 md:px-6">
       {/* Header Section */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-brandPrimary/10 rounded-full mb-4">
@@ -104,37 +105,12 @@ export default function KeyPoints() {
         ))}
       </div>
 
-      {/* Stats or Additional Info - Compact */}
-      <div className="mt-12 md:mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { value: "95%", label: "Project Success" },
-            { value: "4.8/5", label: "Satisfaction" },
-            { value: "200+", label: "Active Members" },
-            { value: "50+", label: "Projects" },
-          ].map((stat, index) => (
-            <div 
-              key={index}
-              className="bg-pureWhite p-4 rounded-xl border border-lightCool text-center hover:shadow-sm transition-shadow"
-            >
-              <div className="text-xl md:text-2xl font-bold text-brandPrimary mb-1">
-                {stat.value}
-              </div>
-              <div className="text-xs md:text-sm text-darkCool">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Stats or Additional Info - Compact - REMOVED*/}
+      
 
-      {/* Optional: CTA Button */}
-      <div className="text-center mt-12">
-        <button className="inline-flex items-center gap-2 px-6 py-3 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-brandSecondary hover:shadow-lg transition-all">
-          Explore Our Methodology
-          <FiZap className="w-4 h-4" />
-        </button>
-      </div>
+      {/* Optional: CTA Button - REMOVED*/}
+      
     </div>
+  </section>
   );
 }

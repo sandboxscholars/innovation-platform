@@ -114,7 +114,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
       </nav>
 
       {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className={`h-${scrolled ? '14' : '16'}`}></div>
+      <div className={`h-${scrolled ? '12' : '14'}`}></div>
 
       {/* Overlay via portal */}
       {isMenuOpen &&

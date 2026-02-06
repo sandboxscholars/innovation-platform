@@ -10,6 +10,8 @@ import About from './pages/About/About';
 import Blogs from './pages/Blogs/Blogs';
 import Projects from './pages/Projects/projects';
 
+import { ThemeProvider } from './context/';
+
 
 
 //- Global wrapper/Layout for all pages
