@@ -1,115 +1,171 @@
 import React from 'react';
-// import { Linkedin, Instagram, Facebook, Twitter, Mail } from "lucide-react";
-import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter, FaEnvelope } from "react-icons/fa";
-
-
-// Footer Component
-// Bottom section of the page with dark blue background
-// - Divided into three columns:
-//   1. Contact info (email, phone, address)
-//   2. Copyright + company name
-//   3. Social links
-// - Provides legal and contact details
-
+import { 
+  FaLinkedin, 
+  FaInstagram, 
+  FaFacebook, 
+  FaTwitter, 
+  FaEnvelope,
+  FaGithub,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaPaperPlane
+} from "react-icons/fa";
 
 function Footer() {
-  return (
-    <footer className="py-12 px-6 bg-[var(--background-color)] text-[var(--foreground-color)]">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left Section */}
-        <div className="flex flex-col gap-6">
-          <h2 className="px-2 text-5xl font-bold">
-            Reach out to <span className="">us!</span>
-          </h2>
-          <p className="px-2 text-lg max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore manostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            iru
-          </p>
+  const currentYear = new Date().getFullYear();
 
-          {/* Contact form */}
-          <div className="bg-[var(--primary-color)]/17 p-6 rounded-md">
-            <h3 className="text-lg font-bold mb-1">Your queries...</h3>
-            <div className="border-b border-[var(--foreground-color)] mb-4"></div>
-            <form className="flex flex-col gap-4">
+  const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Projects", href: "/projects" },
+    { name: "Blog", href: "/blog" },
+    { name: "Team", href: "/team" },
+    { name: "Join Us", href: "/join" },
+  ];
+
+  const resources = [
+    { name: "Documentation", href: "/docs" },
+    { name: "Research Papers", href: "/research" },
+    { name: "Case Studies", href: "/cases" },
+    { name: "Community", href: "/community" },
+    { name: "Support", href: "/support" },
+    { name: "FAQ", href: "/faq" },
+  ];
+
+  const socialLinks = [
+    { icon: FaLinkedin, href: "#", label: "LinkedIn" },
+    { icon: FaInstagram, href: "#", label: "Instagram" },
+    { icon: FaFacebook, href: "#", label: "Facebook" },
+    { icon: FaTwitter, href: "#", label: "Twitter" },
+    { icon: FaGithub, href: "#", label: "GitHub" },
+    { icon: FaEnvelope, href: "mailto:contact@example.com", label: "Email" },
+  ];
+
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          {/* Brand & Description */}
+          <div className="md:col-span-4">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center">
+                <span className="text-white font-bold text-lg">DS</span>
+              </div>
               <div>
-                <label className="block text-md font-bold mb-1">EMAIL</label>
+                <h3 className="text-xl font-bold text-white">Sandbox Scholar</h3>
+                <p className="text-sm text-gray-400">Student Innovation Network</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-400 mb-4">
+              Empowering students to innovate, create, and lead through collaborative projects and research.
+            </p>
+            {/* Newsletter Signup */}
+            <div className="mb-6">
+              <p className="text-sm font-medium text-white mb-2">Stay Updated</p>
+              <div className="flex gap-2">
                 <input
                   type="email"
-                  className="w-full border-b border-[var(--foreground-color)] bg-transparent focus:outline-none"
+                  placeholder="Your email"
+                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded text-sm focus:outline-none focus:border-blue-500"
                 />
+                <button className="px-4 py-2 bg-blue-600 text-white rounded text-sm font-medium hover:bg-blue-700 transition-colors">
+                  <FaPaperPlane className="w-4 h-4" />
+                </button>
               </div>
-              <div>
-                <label className="block text-md font-bold mb-1">MESSAGE</label>
-                <textarea
-                  rows="2"
-                  className="w-full border-b border-[var(--foreground-color)] bg-transparent focus:outline-none resize-none"
-                />
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="md:col-span-2">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <a 
+                    href={link.href} 
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="md:col-span-2">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Resources</h4>
+            <ul className="space-y-2">
+              {resources.map((resource) => (
+                <li key={resource.name}>
+                  <a 
+                    href={resource.href} 
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {resource.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="md:col-span-4">
+            <h4 className="text-sm font-semibold text-white uppercase tracking-wider mb-4">Contact Us</h4>
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-center gap-3">
+                <FaEnvelope className="w-4 h-4 text-gray-400" />
+                <span className="text-sm text-gray-400">contact@sandboxscholar.org</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <FaPhone className="w-4 h-4 text-gray-400" />
+                <span className="text-sm text-gray-400">+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <FaMapMarkerAlt className="w-4 h-4 text-gray-400" />
+                <span className="text-sm text-gray-400">University Campus, Innovation Center</span>
+              </li>
+            </ul>
+
+            {/* Social Links */}
+            <div>
+              <p className="text-sm font-medium text-white mb-3">Follow Us</p>
+              <div className="flex gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-colors"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
               </div>
-              <button
-                type="submit"
-                className="self-end border border-[var(--foreground-color)] px-4 py-1 text-sm font-semibold hover:bg-blue-200"
-              >
-                SEND
-              </button>
-            </form>
+            </div>
           </div>
         </div>
 
-        {/* Right Section */}
-        <div className="flex flex-col gap-6">
-          {/* Logo + title */}
-          <div className="flex items-center gap-4">
-            <div className="w-30 h-30 rounded-full bg-[var(--primary-color)]/17"></div>
-            <h3 className="text-3xl font-neue-ultraBold font-bold leading-tight">
-              The Daily <br /> Scholar
-            </h3>
+        {/* Divider */}
+        <hr className="border-gray-800 my-6" />
+
+        {/* Bottom Bar */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="text-sm text-gray-500">
+            © {currentYear} Sandbox Scholar. All rights reserved.
           </div>
-
-          {/* Links grid */}
-          <div className="grid grid-cols-2 gap-3">
-            {[
-              "Services",
-              "Stories from us",
-              "Articles",
-              "Upcoming Projects",
-              "Reports",
-              "Join the team!",
-              "Collaboration",
-              "Support us!",
-            ].map((link, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="bg-[var(--primary-color)]/17 px-3 py-2 text-md text-center font-medium"
-              >
-                {link}
-              </a>
-            ))}
-          </div>
-
-          {/* Divider */}
-          <hr className="border-black my-2" />
-
-          {/* Social Media */}
-          <div className="flex flex-col gap-3">
-            <p className="text-blue-600 font-semibold text-sm text-center mb-2">
-              FOLLOW US ON SOCIAL MEDIA
-            </p>
-            <div className="flex gap-8 justify-center text-[var(--foreground-color)]">
-              <a href="#"><FaLinkedin className="w-6 h-6" /></a>
-              <a href="#"><FaInstagram className="w-6 h-6" /></a>
-              <a href="#"><FaFacebook className="w-6 h-6" /></a>
-              <a href="#"><FaTwitter className="w-6 h-6" /></a>
-              <a href="#"><FaEnvelope className="w-6 h-6" /></a>
-            </div>
+          
+          <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+            <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="/cookies" className="hover:text-white transition-colors">Cookie Policy</a>
+            <a href="/sitemap" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
     </footer>
-  
-  )
+  );
 }
 
-export default Footer
+export default Footer;

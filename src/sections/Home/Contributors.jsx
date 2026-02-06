@@ -207,25 +207,8 @@ export default function Contributors() {
           </div>
         </div>
 
-        {/* CTA Footer */}
-        <div className="mt-16 text-center">
-          <div className="inline-block p-1 bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-2xl">
-            <div className="bg-pureWhite p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-deepCharcoal mb-4">Ready to Contribute?</h3>
-              <p className="text-darkCool mb-6 max-w-2xl mx-auto">
-                Join our community of innovators and work on projects that make a real impact.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-3 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-brandSecondary transition-colors">
-                  Join Our Team
-                </button>
-                <button className="px-8 py-3 bg-paperWhite border-2 border-lightCool text-deepCharcoal rounded-xl font-semibold hover:border-brandTertiary transition-colors">
-                  View Open Positions
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* CTA Footer - REMOVED */}
+       
       </div>
     </section>
   );
