@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 
 function About() {
   // Team members data
   const teamMembers = [
-    { id: 1, name: 'Alex Morgan', role: 'President', department: 'Computer Science' },
-    { id: 2, name: 'Taylor Chen', role: 'Vice President', department: 'Engineering' },
-    { id: 3, name: 'Jordan Patel', role: 'Creative Director', department: 'Design' },
-    { id: 4, name: 'Morgan Lee', role: 'Project Lead', department: 'Business' },
+    { id: 1, name: 'Nafis Fuad', role: 'Founder', department: 'Project Management' },
+    { id: 2, name: 'Ishita Reddy', role: 'Executive Member', department: 'Project Management' },
+    { id: 3, name: 'Mashrafi', role: 'Developer', department: 'Web Development' },
+    { id: 4, name: 'Muhammed Althaf', role: 'Developer', department: 'Web Development' },
   ];
 
   // Milestones data
@@ -199,9 +201,13 @@ function About() {
           </div>
           
           <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-blue-700 text-white rounded-lg font-semibold hover:bg-blue-600 transition-colors">
-              View Full Team
-            </button>
+            <Link 
+  to="/team" 
+  className="group relative overflow-hidden px-8 py-3 bg-brandPrimary text-pureWhite rounded-lg font-semibold hover:bg-brandSecondary transition-all duration-300"
+>
+  <span className="relative z-10">View Full Team</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-brandSecondary to-brandTertiary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+</Link>
           </div>
         </div>
       </section>

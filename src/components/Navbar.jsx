@@ -16,7 +16,9 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
     { id: 1, title: "About Us", path: "about-us" },
     { id: 2, title: "Projects", path: "projects" },
     { id: 3, title: "Blogs", path: "blogs" },
-    { id: 4, title: "Join Us", path: "join-us" },
+    { id: 4, title: "Members", path: "team" },
+    { id: 5, title: "Join Us", path: "join-us" },
+    
   ];
 
   // Handle scroll effect

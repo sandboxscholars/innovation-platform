@@ -15,6 +15,10 @@ import Blogs from './pages/Blogs/Blogs';
 import Projects from './pages/Projects/projects';
 import JoinUs from './pages/JoinUs/joinUs';
 import SubmitArticles from './pages/SubmitArticles/submitArticles';
+import Team from './pages/team/team'
+
+//  IMPORT AS MUCH AS NECESSARY
+import ContentTemplate from './pages/Content/AAAtemplate';
 
 
 
@@ -72,6 +76,8 @@ export default function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/submit-articles" element={<SubmitArticles />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/content-template-private" element={<ContentTemplate />} />
           {/* Add more routes as needed(More Pages e.g. Blogs, Clubs, About Us etc) */}
         </Route>
       </Routes>
