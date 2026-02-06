@@ -12,19 +12,7 @@ import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 export default function KeyPoints() {
   // Section data (sandbox + KeyPoints)
   const sections = [
-    {
-      id: "sandbox", // Special sandbox Scholar section
-      type: "sandbox",
-      title: "Sandbox Scholars",
-      subtitle: "STUDENT INNOVATION NETWORK...",
-      content1:
-        "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      content2:
-        "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      content3: "reprehenderit in voluptate velit esse cillum dolore",
-      quoteTitle: "A place for innovation",
-      quoteSubtitle: "A place to grow indefinitely",
-    },
+    /** SOLID RECTANGULAR CARD REMOVED */
     {
       id: 1,
       type: "point", // Regular KeyPoint

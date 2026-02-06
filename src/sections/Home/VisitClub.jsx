@@ -7,7 +7,7 @@ import React from 'react'
 
 function VisitClub() {
   return (
-    <div>VisitClub</div>
+    <div>/** REMOVED*/</div>
   )
 }
 
