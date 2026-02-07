@@ -19,6 +19,8 @@ import Team from './pages/team/team'
 
 //  IMPORT AS MUCH AS NECESSARY
 import ContentTemplate from './pages/Content/AAAtemplate';
+import TermsAndConditions from "./pages/TermsAndConditions/termsAndConditions";
+import ContactPage from "./pages/ContactPage/contactPage"
 
 
 
@@ -78,6 +80,8 @@ export default function App() {
           <Route path="/submit-articles" element={<SubmitArticles />} />
           <Route path="/team" element={<Team />} />
           <Route path="/content-template-private" element={<ContentTemplate />} />
+          <Route path="/termsAndConditions" element={<TermsAndConditions />} />
+          <Route path="/contact" element={<ContactPage />} /> 
           {/* Add more routes as needed(More Pages e.g. Blogs, Clubs, About Us etc) */}
         </Route>
       </Routes>

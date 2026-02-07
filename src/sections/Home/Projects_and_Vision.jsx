@@ -164,7 +164,7 @@ export default function Projects_and_Vision() {
             {/* CTA Button */}
             <div className="text-center pt-4">
               <Link to="/projects" className="group inline-flex items-center gap-3 px-8 py-4 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-accentSecondary hover:shadow-lg transition-all">
-                Navigate to the <b>Projects</b> tab to check all of our projects
+                Navigate to the<b>Projects</b>tab to learn more
             </Link>
             </div>
           </div>

@@ -1,36 +1,37 @@
 import ContributorCard from "../../components/Cards/ContributorCard";
 import TeamCard from "../../components/Cards/TeamCard";
 import { Search } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const contributors = [
   {
-    name: "John Doe",
-    role: "Executive Lead",
+    name: "Mohammad Nafis Fuad",
+    role: "Founder",
     contributions: "Project Management, Strategy",
-    email: "john@email.com",
+    email: "nafisfuad2024@gmail.com",
     image: "",
   },
   {
-    name: "Jane Smith",
-    role: "Research Head",
-    contributions: "Content Research, Reports",
-    email: "jane@email.com",
+    name: "Ishita Reddy Yakkanti",
+    role: "Executive Member",
+    contributions: "Project Management",
+    email: "krishnareddyym@gmail.com",
     image: "",
   },
   {
-    name: "Michael Lee",
+    name: "Ali Hasan Mashrafi",
     role: "Web Developer",
     contributions: "Frontend, Backend Development",
-    email: "michael@email.com",
+    email: "mashrafi.mail@gmail.com",
     image: "",
   },
 ];
 
 const teams = [
-  { name: "Executive Team", members: 8, color: "brandPrimary" },
-  { name: "Research Team", members: 12, color: "brandSecondary" },
-  { name: "Visual Designers", members: 6, color: "accentPrimary" },
-  { name: "Web Developers", members: 10, color: "accentSecondary" },
+  { name: "Executive Team", members: 2, color: "brandPrimary" },
+  { name: "Research Team", members: 4, color: "brandSecondary" },
+  { name: "Visual Designers", members: 3, color: "accentPrimary" },
+  { name: "Web Developers", members: 6, color: "accentSecondary" },
 ];
 
 export default function Contributors() {
@@ -57,10 +58,10 @@ export default function Contributors() {
         {/* Stats Banner */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {[
-            { label: "Active Contributors", value: "50+" },
-            { label: "Teams", value: "8" },
-            { label: "Projects", value: "30+" },
-            { label: "Hours Contributed", value: "5k+" },
+            { label: "Active Contributors", value: "10+" },
+            { label: "Teams", value: "4+" },
+            { label: "Projects", value: "12+" },
+            { label: "Publications", value: "25+" },
           ].map((stat, index) => (
             <div 
               key={index}
@@ -122,9 +123,12 @@ export default function Contributors() {
                 </div>
                 
                 <div className="mt-6 pt-6 border-t border-lightCool">
-                  <button className="w-full py-3 text-brandPrimary font-medium hover:bg-brandPrimary/5 rounded-xl transition-colors">
-                    View All Teams →
-                  </button>
+                  <Link 
+  to="/team" 
+  className="w-full py-3 text-brandPrimary font-medium hover:bg-brandPrimary/5 rounded-xl transition-colors flex items-center justify-center"
+>
+  View All Contributors →
+</Link>
                 </div>
               </div>
             </div>
@@ -186,9 +190,7 @@ export default function Contributors() {
                       >
                         {person.email}
                       </a>
-                      <button className="text-xs text-darkCool hover:text-brandPrimary font-medium">
-                        View Profile →
-                      </button>
+                      f
                     </div>
                   </div>
                 ))}

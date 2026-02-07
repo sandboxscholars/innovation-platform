@@ -34,7 +34,8 @@ export default function KeyPoints() {
     {
       id: 4,
       type: "point",
-      img_name: "collaboration", // Assuming you have this image
+      img_name: "engagement", // Assuming you have this image
+      img: "/workspaces/innovation-platform/dist/images/engagement.svg",
       icon: FiUsers,
       title: "Collaborative Innovation",
       description: "Building solutions through diverse teamwork. We connect students from different disciplines to create more impactful, well-rounded projects.",
