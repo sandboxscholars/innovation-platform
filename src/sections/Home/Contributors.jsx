@@ -87,14 +87,7 @@ export default function Contributors() {
                 </div>
                 
                 {/* Search */}
-                <div className="relative mb-6">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-darkWarm w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search teams..."
-                    className="w-full pl-12 pr-4 py-3 bg-paperWhite border border-lightCool rounded-xl focus:outline-none focus:ring-2 focus:ring-brandTertiary focus:border-transparent text-deepCharcoal placeholder-darkWarm/50"
-                  />
-                </div>
+                
                 
                 {/* Team List */}
                 <div className="space-y-3">
@@ -113,9 +106,7 @@ export default function Contributors() {
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-sm text-darkCool">{team.members} members</span>
-                          <div className="text-brandTertiary opacity-0 group-hover:opacity-100 transition-opacity">
-                            →
-                          </div>
+                          
                         </div>
                       </div>
                     </div>

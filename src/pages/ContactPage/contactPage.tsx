@@ -64,8 +64,8 @@ function ContactPage() {
         {
           platform: "Email",
           icon: FiMail,
-          value: "krishnareddyym@gmail.com",
-          link: "mailto:krishnareddyym@gmail.com",
+          value: "ishitareddyya2510@gmail.com",
+          link: "mailto:ishitareddyya2510@gmail.com",
           color: "bg-red-100 text-red-600"
         },
         {
@@ -91,7 +91,7 @@ function ContactPage() {
     },
     {
       title: "Project Submissions",
-      email: "krishnareddyym@gmail.com",
+      email: "ishitareddyya2510@gmail.com",
       description: "To submit new project proposals",
       icon: FiMessageSquare
     },
@@ -111,7 +111,7 @@ function ContactPage() {
 
   // Social media links
   const socialLinks = [
-    { platform: "Facebook", icon: FaFacebook, link: "https://facebook.com/", color: "bg-blue-100 text-blue-700" },
+    { platform: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/profile.php?id=61587993231301", color: "bg-blue-100 text-blue-700" },
     { platform: "Instagram", icon: FaInstagram, link: "https://instagram.com/sandbox_scholars", color: "bg-pink-100 text-pink-600" },
     { platform: "LinkedIn", icon: FaLinkedin, link: "https://linkedin.com/company/sandbox-scholars", color: "bg-blue-100 text-blue-700" },
     { platform: "GitHub", icon: FaGithub, link: "https://github.com/sandboxscholars", color: "bg-gray-100 text-gray-800" },
@@ -146,11 +146,28 @@ function ContactPage() {
 
             {/* Organization Name & Tagline */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Sandbox Scholars
-              </h1>
+              <h1 className="text-4xl md:text-5xl font-jawi font-bold mb-4 text-blue-900">
+  <span className="relative inline-block">
+    Sandbox Scholars
+    {/* Decorative Islamic-style pattern */}
+    <svg 
+      className="absolute -bottom-4 left-0 w-full h-3 text-blue-600 opacity-60"
+      viewBox="0 0 300 20"
+    >
+      <path 
+        d="M0,10 Q50,0 100,10 T200,10"
+        fill="none" 
+        stroke="currentColor" 
+        strokeWidth="1.5"
+      />
+      <circle cx="75" cy="10" r="2" fill="currentColor" />
+      <circle cx="150" cy="10" r="2" fill="currentColor" />
+      <circle cx="225" cy="10" r="2" fill="currentColor" />
+    </svg>
+  </span>
+</h1>
               <div className="text-xl text-gray-600 mb-6">
-                Student Innovation Network
+                <b>Student Innovation Network</b>
               </div>
               <p className="text-gray-700 max-w-md text-lg">
                 Connecting student innovators through collaboration, 

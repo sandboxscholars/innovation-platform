@@ -7,16 +7,16 @@ function About() {
   const teamMembers = [
     { id: 1, name: 'Nafis Fuad', role: 'Founder', department: 'Project Management' },
     { id: 2, name: 'Ishita Reddy', role: 'Executive Member', department: 'Project Management' },
-    { id: 3, name: 'Mashrafi', role: 'Developer', department: 'Web Development' },
+    { id: 3, name: 'Ali Hasan Mashrafi', role: 'Developer', department: 'Web Development' },
     { id: 4, name: 'Muhammed Althaf', role: 'Developer', department: 'Web Development' },
   ];
 
   // Milestones data
   const milestones = [
-    { year: '2020', title: 'Organization Founded', description: 'Started with 5 passionate students' },
-    { year: '2021', title: 'First Hackathon', description: 'Hosted 200+ participants' },
-    { year: '2022', title: 'Community Outreach', description: 'Partnered with 10+ schools' },
-    { year: '2023', title: 'International Recognition', description: 'Featured in global innovation forum' },
+    { year: 'July 2025', title: 'Organization Founded', description: 'Started with 12 passionate students' },
+    { year: 'September 2025', title: 'First Open-Source Contribution', description: 'Released a Discord automation bot for streamlined operations' },
+    { year: 'November 2025', title: 'Global Outreach', description: 'Community expanded across 4 countries' },
+    { year: 'February 2026', title: 'Digital Expansion', description: 'Scaled operations across major social platforms' },
   ];
 
   return (
@@ -55,7 +55,7 @@ function About() {
             <p className="text-lg text-gray-700 leading-relaxed">
               To empower students with the tools, knowledge, and network needed to 
               transform innovative ideas into impactful solutions that address 
-              real-world challenges.
+              real-world challenges. Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects
             </p>
             <div className="mt-8 pt-6 border-t border-gray-100">
               <span className="text-orange-600 font-semibold">Focus Areas:</span>
@@ -87,11 +87,11 @@ function About() {
             </p>
             <div className="mt-8 pt-6 border-t border-gray-100">
               <div className="flex items-center gap-4">
-                <div className="text-4xl font-bold text-blue-600">250+</div>
+                <div className="text-4xl font-bold text-blue-600">20+</div>
                 <div className="text-sm text-gray-500">Active Members</div>
               </div>
               <div className="flex items-center gap-4 mt-4">
-                <div className="text-4xl font-bold text-blue-600">50+</div>
+                <div className="text-4xl font-bold text-blue-600">10+</div>
                 <div className="text-sm text-gray-500">Projects Completed</div>
               </div>
             </div>
@@ -113,11 +113,11 @@ function About() {
             {[
               { 
                 title: 'Innovation First', 
-                description: 'We believe in pushing boundaries and exploring new possibilities in everything we do.',
+                description: 'Cultivating complex challenges through innovation and free thinking is what we strive for. Multiple angles and scenarios are considered when systematic approaches are taken',
               },
               { 
                 title: 'Collaborative Spirit', 
-                description: 'Great ideas grow through diverse perspectives and shared passion.',
+                description: 'Ideas are allowed to flow openly in our free environment. Encouraging out of the box thinking to develop innovative concepts into viable projects. ',
               },
               { 
                 title: 'Student-Led', 
@@ -176,7 +176,7 @@ function About() {
       <section className="py-16 px-6 md:px-12 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">A Glimpse of Our Team</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Passionate students leading our initiatives across various disciplines
             </p>
@@ -220,12 +220,18 @@ function About() {
             Join our community of innovators and start creating meaningful change today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-500 transition-colors">
-              Join Our Community
-            </button>
-            <button className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              View Projects
-            </button>
+            <Link 
+  to="/join-us" 
+  className="px-8 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-500 transition-colors inline-block"
+>
+  Join Our Community
+</Link>
+            <Link 
+  to="/projects" 
+  className="px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors inline-block"
+>
+  View Projects
+</Link>
           </div>
         </div>
       </section>

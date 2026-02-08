@@ -10,7 +10,7 @@ export default function KeyPoints() {
       img_name: "thinking",
       icon: FiTarget,
       title: "Critical Problem Solving",
-      description: "We cultivate analytical thinking through complex challenges that require innovative solutions. Students learn systematic approaches considering multiple perspectives.",
+      description: "Cultivating complex challenges through innovation and free thinking is what we strive for. Multiple angles and scenarios are considered when systematic approaches are taken.",
       author: "Student Innovation Team",
     },
     {
@@ -28,7 +28,7 @@ export default function KeyPoints() {
       img_name: "idea",
       icon: FiZap,
       title: "Creative Ideation",
-      description: "Fostering an environment where creative ideas flourish. We encourage out-of-the-box thinking to develop innovative concepts into viable projects.",
+      description: "Ideas are allowed to flow openly in our free environment. Encouraging out of the box thinking to develop innovative concepts into viable projects.",
       author: "Creative Directors",
     },
     {
@@ -38,7 +38,7 @@ export default function KeyPoints() {
       img: "/workspaces/innovation-platform/dist/images/engagement.svg",
       icon: FiUsers,
       title: "Collaborative Innovation",
-      description: "Building solutions through diverse teamwork. We connect students from different disciplines to create more impactful, well-rounded projects.",
+      description: "Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects.",
       author: "Project Coordinators",
     },
   ];

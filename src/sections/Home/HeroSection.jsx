@@ -1,5 +1,6 @@
+
 import React, { useState } from "react";
-import { FiArrowRight, FiZap, FiUsers, FiTarget, FiTrendingUp } from "react-icons/fi";
+import { FiArrowRight, FiZap, FiUsers, FiTarget, FiTrendingUp, FiBook, FiTool, FiShare } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 
@@ -63,7 +64,15 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              <h1 class="text-4xl md:text-5xl font-bold text-[#82afdc] mb-4 italic">Sandbox Scholars</h1>
+     <div className="mb-4">
+  <h1 className="text-4xl md:text-5xl font-playfair italic font-bold text-blue-900">
+    Sandbox
+  </h1>
+  <h2 className="text-3xl md:text-4xl font-agrandir font-bold text-cyan-700 -mt-2 ml-2">
+    Scholars
+  </h2>
+  <div className="h-0.5 w-32 bg-gradient-to-r from-blue-600 to-cyan-500 mt-2 rounded-full"></div>
+</div>
               <span className="block mt-4">Where Students</span>
               <span className="relative">
                 <span className="text-blue-700">Innovate</span>
@@ -106,100 +115,237 @@ export default function HeroSection() {
           </div>
 
           {/* Right Column - Motivation Cards */}
-          <div className="relative">
-            {/* Container */}
-            <div className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8 shadow-sm">
-              {/* Section Label */}
-              <div className="text-center mb-8">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-100 rounded-full">
-                  <span className="text-yellow-800 text-sm font-medium uppercase tracking-wider">
-                    Our Motivation
-                  </span>
-                </div>
-              </div>
+          <div className="relative max-w-4xl mx-auto">
+  <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl p-6 md:p-8 shadow-xl shadow-blue-100/50 border border-blue-100/50">
+    
+    {/* Minimal Header */}
+    <div className="text-center mb-10">
+      <div className="inline-flex items-center gap-2 px-4 py-2 bg-brandPrimary/10 rounded-full mb-4">
+          <FiTarget className="w-4 h-4 text-brandPrimary" />
+          <span className="text-brandPrimary font-medium text-sm">Our Motivation</span>
+        </div>
+    </div>
 
-              {/* Grid of Motivation Cards */}
-              <div className="grid grid-cols-2 gap-4">
-                {motivationCards.map((card, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveCard(index)}
-                    className={`relative p-4 rounded-lg border-2 transition-all duration-300 flex flex-col items-center justify-center group ${
-                      activeCard === index
-                        ? `${card.borderColor} ${card.bgColor} shadow-sm`
-                        : 'border-gray-200 hover:border-blue-200 hover:bg-gray-50'
-                    }`}
-                  >
-                    {/* Icon */}
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 transition-all duration-300 ${
-                      activeCard === index 
-                        ? card.bgColor
-                        : 'bg-gray-100 group-hover:bg-blue-50'
-                    }`}>
-                      <card.icon className={`w-5 h-5 transition-all duration-300 ${
-                        activeCard === index 
-                          ? card.textColor
-                          : 'text-gray-600 group-hover:text-blue-600'
-                      }`} />
-                    </div>
-
-                    {/* Word */}
-                    <span className={`text-lg font-bold transition-all duration-300 ${
-                      activeCard === index 
-                        ? card.textColor
-                        : 'text-gray-900 group-hover:text-blue-700'
-                    }`}>
-                      {card.word}
-                    </span>
-
-                    {/* Active Indicator */}
-                    {activeCard === index && (
-                      <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                        <div className={`w-6 h-1 ${card.bgColor} rounded-full`}></div>
-                      </div>
-                    )}
-                  </button>
-                ))}
-              </div>
-
-              {/* Visual Connection Line */}
-              <div className="relative mt-8 mb-6">
-                <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-blue-400 to-orange-500 transform -translate-y-1/2 z-0"></div>
-                <div className="relative flex justify-between z-10">
-                  {[0, 1, 2, 3].map((index) => (
-                    <button
-                      key={index}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        activeCard === index
-                          ? motivationCards[index].bgColor
-                          : 'bg-gray-300'
-                      }`}
-                      onClick={() => setActiveCard(index)}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Sandbox Scholars Visual Element */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="text-center">
-                  <div className="inline-block p-3 rounded-full bg-blue-100 mb-3">
-                    <FiUsers className="w-6 h-6 text-blue-700" />
-                  </div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
-                    Sandbox Scholars
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    A community of innovators pushing boundaries
-                  </p>
-                </div>
-              </div>
+    {/* Four Cards with Alternating Rotations */}
+    <div className="relative">
+      <div className="grid grid-cols-2 gap-5 md:gap-6 md:grid-cols-2 lg:grid-cols-2">
+        
+        {/* CREATE Card (-1° rotation) */}
+        <div
+          onClick={() => setActiveCard(0)}
+          className="relative transition-all duration-500 ease-out cursor-pointer transform -rotate-1 hover:-rotate-3"
+          style={{
+            transform: activeCard === 0 ? 'scale(1.05) rotate(-1deg)' : 'rotate(-1deg)'
+          }}
+        >
+          <div className={`relative p-5 rounded-2xl border transition-all duration-300
+            ${activeCard === 0
+              ? 'border-blue-400 bg-white shadow-xl shadow-blue-400/20'
+              : 'border-gray-200/80 bg-white/90 backdrop-blur-sm hover:border-blue-300/50 hover:shadow-lg'
+            }`}
+          >
+            <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg border
+              ${activeCard === 0
+                ? 'bg-gradient-to-b from-blue-100 to-white border-white'
+                : 'bg-white border-gray-200/50 hover:border-blue-300'
+              }`}
+            >
+              <FiZap className={`w-6 h-6 transition-all duration-300
+                ${activeCard === 0 ? 'text-blue-700' : 'text-gray-700 hover:text-blue-600'}
+              `} />
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-yellow-200 opacity-50"></div>
-            <div className="absolute -bottom-3 -left-3 w-4 h-4 rounded-full bg-blue-200 opacity-50"></div>
+            <div className="pt-8 text-center">
+              <h3 className={`text-xl font-bold mb-3 transition-all duration-300
+                ${activeCard === 0 ? 'text-blue-700' : 'text-gray-900'}
+              `}>
+                Experiment
+              </h3>
+              
+              <p className={`text-sm transition-all duration-500
+                ${activeCard === 0
+                  ? 'max-h-20 opacity-100 text-gray-600 mt-2'
+                  : 'max-h-0 opacity-0'
+                }`}
+              >
+                Break the rules, build your own
+              </p>
+            </div>
           </div>
+        </div>
+
+        {/* LEARN Card (+1° rotation) */}
+        <div
+          onClick={() => setActiveCard(1)}
+          className="relative transition-all duration-500 ease-out cursor-pointer transform rotate-1 hover:rotate-3"
+          style={{
+            transform: activeCard === 1 ? 'scale(1.05) rotate(1deg)' : 'rotate(1deg)'
+          }}
+        >
+          <div className={`relative p-5 rounded-2xl border transition-all duration-300
+            ${activeCard === 1
+              ? 'border-emerald-400 bg-white shadow-xl shadow-emerald-400/20'
+              : 'border-gray-200/80 bg-white/90 backdrop-blur-sm hover:border-emerald-300/50 hover:shadow-lg'
+            }`}
+          >
+            <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg border
+              ${activeCard === 1
+                ? 'bg-gradient-to-b from-emerald-100 to-white border-white'
+                : 'bg-white border-gray-200/50 hover:border-emerald-300'
+              }`}
+            >
+              <FiBook className={`w-6 h-6 transition-all duration-300
+                ${activeCard === 1 ? 'text-emerald-700' : 'text-gray-700 hover:text-emerald-600'}
+              `} />
+            </div>
+
+            <div className="pt-8 text-center">
+              <h3 className={`text-xl font-bold mb-3 transition-all duration-300
+                ${activeCard === 1 ? 'text-emerald-700' : 'text-gray-900'}
+              `}>
+                Lead
+              </h3>
+              
+              <p className={`text-sm transition-all duration-500
+                ${activeCard === 1
+                  ? 'max-h-20 opacity-100 text-gray-600 mt-2'
+                  : 'max-h-0 opacity-0'
+                }`}
+              >
+                Step up, stand out
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* BUILD Card (-1° rotation) */}
+        <div
+          onClick={() => setActiveCard(2)}
+          className="relative transition-all duration-500 ease-out cursor-pointer transform -rotate-1 hover:-rotate-3"
+          style={{
+            transform: activeCard === 2 ? 'scale(1.05) rotate(-1deg)' : 'rotate(-1deg)'
+          }}
+        >
+          <div className={`relative p-5 rounded-2xl border transition-all duration-300
+            ${activeCard === 2
+              ? 'border-amber-400 bg-white shadow-xl shadow-amber-400/20'
+              : 'border-gray-200/80 bg-white/90 backdrop-blur-sm hover:border-amber-300/50 hover:shadow-lg'
+            }`}
+          >
+            <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg border
+              ${activeCard === 2
+                ? 'bg-gradient-to-b from-amber-100 to-white border-white'
+                : 'bg-white border-gray-200/50 hover:border-amber-300'
+              }`}
+            >
+              <FiTool className={`w-6 h-6 transition-all duration-300
+                ${activeCard === 2 ? 'text-amber-700' : 'text-gray-700 hover:text-amber-600'}
+              `} />
+            </div>
+
+            <div className="pt-8 text-center">
+              <h3 className={`text-xl font-bold mb-3 transition-all duration-300
+                ${activeCard === 2 ? 'text-amber-700' : 'text-gray-900'}
+              `}>
+                Create
+              </h3>
+              
+              <p className={`text-sm transition-all duration-500
+                ${activeCard === 2
+                  ? 'max-h-20 opacity-100 text-gray-600 mt-2'
+                  : 'max-h-0 opacity-0'
+                }`}
+              >
+                Ideas into reality
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* SHARE Card (+1° rotation) */}
+        <div
+          onClick={() => setActiveCard(3)}
+          className="relative transition-all duration-500 ease-out cursor-pointer transform rotate-1 hover:rotate-3"
+          style={{
+            transform: activeCard === 3 ? 'scale(1.05) rotate(1deg)' : 'rotate(1deg)'
+          }}
+        >
+          <div className={`relative p-5 rounded-2xl border transition-all duration-300
+            ${activeCard === 3
+              ? 'border-violet-400 bg-white shadow-xl shadow-violet-400/20'
+              : 'border-gray-200/80 bg-white/90 backdrop-blur-sm hover:border-violet-300/50 hover:shadow-lg'
+            }`}
+          >
+            <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-xl flex items-center justify-center shadow-lg border
+              ${activeCard === 3
+                ? 'bg-gradient-to-b from-violet-100 to-white border-white'
+                : 'bg-white border-gray-200/50 hover:border-violet-300'
+              }`}
+            >
+              <FiShare className={`w-6 h-6 transition-all duration-300
+                ${activeCard === 3 ? 'text-violet-700' : 'text-gray-700 hover:text-violet-600'}
+              `} />
+            </div>
+
+            <div className="pt-8 text-center">
+              <h3 className={`text-xl font-bold mb-3 transition-all duration-300
+                ${activeCard === 3 ? 'text-violet-700' : 'text-gray-900'}
+              `}>
+                Together!!
+              </h3>
+              
+              <p className={`text-sm transition-all duration-500
+                ${activeCard === 3
+                  ? 'max-h-20 opacity-100 text-gray-600 mt-2'
+                  : 'max-h-0 opacity-0'
+                }`}
+              >
+               We rise higher
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Navigation Dots */}
+      <div className="flex justify-center gap-2 mt-10">
+        {[0, 1, 2, 3].map((index) => (
+          <button
+            key={index}
+            onClick={() => setActiveCard(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125
+              ${index % 2 === 0 ? 'hover:-rotate-12' : 'hover:rotate-12'}
+              ${activeCard === index
+                ? index === 0 ? 'bg-blue-500 scale-125' :
+                  index === 1 ? 'bg-emerald-500 scale-125' :
+                  index === 2 ? 'bg-amber-500 scale-125' :
+                  'bg-violet-500 scale-125'
+                : 'bg-gray-300 hover:bg-gray-400'
+              }`}
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* Community Highlight */}
+    <div className={`mt-12 transition-all duration-700 overflow-hidden transform
+      ${activeCard !== null
+        ? 'max-h-35 opacity-100 -rotate-1'
+        : 'max-h-0 opacity-0 rotate-1'
+      }`}
+    >
+     
+    </div>
+
+    {/* CTA REMOVED */}
+   
+  </div>
+
+  {/* Floating Elements */}
+  <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-gradient-to-br from-blue-200/30 to-cyan-200/30 blur-xl animate-float rotate-12"></div>
+  <div className="absolute -bottom-6 -right-6 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-200/30 to-blue-200/30 blur-xl animate-float -rotate-12" style={{ animationDelay: '1s' }}></div>
+</div>
         </div>
       </section>
     </div>

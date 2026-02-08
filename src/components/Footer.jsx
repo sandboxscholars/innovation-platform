@@ -20,7 +20,7 @@ function Footer() {
     { name: "Projects", href: "/projects" },
     { name: "Blog", href: "/blogs" },
     { name: "Team", href: "/team" },
-    { name: "Submission", href: "/submit-articles" },
+    { name: "Submission", href: "/submission" },
     { name: "Join Us", href: "/join-us" },
   ];
 
@@ -35,7 +35,7 @@ function Footer() {
   const socialLinks = [
     { icon: FaLinkedin, href: "https://www.linkedin.com/company/sandbox-scholars/", label: "LinkedIn" },
     { icon: FaInstagram, href: "https://www.instagram.com/sandbox_scholars/", label: "Instagram" },
-    { icon: FaFacebook, href: "#", label: "Facebook" },
+    { icon: FaFacebook, href: "https://www.facebook.com/profile.php?id=61587993231301", label: "Facebook" },
     { icon: FaGithub, href: "https://github.com/sandboxscholars", label: "GitHub" },
     { icon: FaEnvelope, href: "mailto:sandboxscholars.team@gmail.com", label: "Email" },
   ];
