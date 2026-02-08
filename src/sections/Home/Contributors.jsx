@@ -185,12 +185,15 @@ export default function Contributors() {
                     {/* Contact & Actions */}
                     <div className="flex items-center justify-between pt-4 border-t border-lightCool">
                       <a 
-                        href={`mailto:${person.email}`}
-                        className="text-sm text-brandPrimary hover:text-brandSecondary font-medium"
-                      >
-                        {person.email}
-                      </a>
-                      f
+  href={`mailto:${person.email}`}
+  className="text-sm text-brandPrimary hover:text-brandSecondary font-medium"
+>
+  {person.email}
+</a>
+
+                      {/** VIEW PROFILE FEATURE REMOVED */}
+
+                      
                     </div>
                   </div>
                 ))}
