@@ -111,11 +111,10 @@ function ContactPage() {
 
   // Social media links
   const socialLinks = [
-    { platform: "Website", icon: FiGlobe, link: "https://sandboxscholars.org", color: "bg-blue-50 text-blue-600" },
     { platform: "Facebook", icon: FaFacebook, link: "https://facebook.com/", color: "bg-blue-100 text-blue-700" },
     { platform: "Instagram", icon: FaInstagram, link: "https://instagram.com/sandbox_scholars", color: "bg-pink-100 text-pink-600" },
     { platform: "LinkedIn", icon: FaLinkedin, link: "https://linkedin.com/company/sandbox-scholars", color: "bg-blue-100 text-blue-700" },
-    { platform: "GitHub", icon: FaGithub, link: "https://github.com/sandboxscholars", color: "bg-gray-100 text-gray-800" }
+    { platform: "GitHub", icon: FaGithub, link: "https://github.com/sandboxscholars", color: "bg-gray-100 text-gray-800" },
   ];
 
   // Office information
@@ -137,7 +136,7 @@ function ContactPage() {
     <div className="flex justify-center mb-2">
       <img 
         src="./src/assets/logo.svg" 
-        alt="Logo" 
+        alt="Sandbox Scholars logo" 
         className="h-33 md:h-34 w-auto drop-shadow-lg"
       />
     </div>
