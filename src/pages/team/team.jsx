@@ -66,7 +66,7 @@ function Team() {
     },
     {
       id: 4,
-      name: "Muhammed Althaf M R",
+      name: "Muhammed Althaf",
       email: "macrontime048@gmail.com",
       contact: "+91 9544493837",
       roles: ["Data Analyst", "Web Developer"],
@@ -446,7 +446,7 @@ function Team() {
         {filter === "all" || filter === "star" ? (
           <div className="mb-12">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-accentTertiary/20 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-lg bg-accentTertiary/25 flex items-center justify-center">
                 <FiStar className="w-5 h-5 text-accentTertiary" />
               </div>
               <div>
@@ -456,7 +456,7 @@ function Team() {
             </div>
 
             {/* FIXED DIMENSION CARDS */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {allMembers
                 .filter(member => member.type === 2)
                 .map(member => (
@@ -469,7 +469,7 @@ function Team() {
                   >
                     <div className="bg-pureWhite rounded-2xl border border-lightCool p-6 hover:shadow-xl hover:border-accentTertiary transition-all duration-300 h-[320px] flex flex-col">
                       {/* Member Type Badge */}
-                      <div className="flex justify-between items-start mb-4">
+                      <div className="flex justify-between items-start mb-3">
                         <div className={`px-3 py-1 ${getTypeColor(member.type)} text-pureWhite text-xs font-semibold rounded-full flex items-center gap-1`}>
                           {getTypeIcon(member.type)}
                           {getTypeLabel(member.type)}
@@ -489,13 +489,13 @@ function Team() {
                         <h3 className="text-lg font-bold text-deepCharcoal mb-2 text-center line-clamp-1">{member.name}</h3>
                         
                         {/* Roles - Scrollable if too many */}
-                        <div className="flex flex-wrap justify-center gap-2 mb-4 min-h-[48px] max-h-[72px] overflow-y-auto scrollbar-thin">
-                          {member.roles.map((role, idx) => (
-                            <span key={idx} className="text-xs px-2 py-1 bg-lightCool text-darkCool rounded flex-shrink-0">
-                              {role}
-                            </span>
-                          ))}
-                        </div>
+                        <div className="flex flex-wrap justify-center gap-2 mb-4">
+  {member.roles.map((role, idx) => (
+    <span key={idx} className="text-xs px-2 py-1 bg-lightCool text-darkCool rounded">
+      {role}
+    </span>
+  ))}
+</div>
 
                         {/* Tenure */}
                         <div className="flex items-center justify-center gap-2 text-sm text-darkCool mb-4 flex-shrink-0">
@@ -548,7 +548,7 @@ function Team() {
                   {/* Member Header - Fixed height section */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className={`w-10 h-10 rounded-full ${
+                      <div className={`w-16 h-16 rounded-full ${
                         member.type === 1 ? 'bg-brandPrimary/10' : 
                         member.type === 2 ? 'bg-accentTertiary/10' : 
                         'bg-deepCharcoal/10'

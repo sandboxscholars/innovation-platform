@@ -135,7 +135,7 @@ function ContactPage() {
   <div className="text-center">
     <div className="flex justify-center mb-2">
       <img 
-        src="./src/assets/logo.svg" 
+        src="/logo.svg" 
         alt="Sandbox Scholars logo" 
         className="h-33 md:h-34 w-auto drop-shadow-lg"
       />

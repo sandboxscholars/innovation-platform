@@ -5,6 +5,7 @@ import { Route, Routes, Outlet } from 'react-router-dom';
 import './App.css';
 
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { HashRouter as Router } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
@@ -77,7 +78,7 @@ export default function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/join-us" element={<JoinUs />} />
-          <Route path="/submit-articles" element={<SubmitArticles />} />
+          <Route path="/submission" element={<SubmitArticles />} />
           <Route path="/team" element={<Team />} />
           <Route path="/content-template-private" element={<ContentTemplate />} />
           <Route path="/termsAndConditions" element={<TermsAndConditions />} />

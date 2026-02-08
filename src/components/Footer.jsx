@@ -20,13 +20,13 @@ function Footer() {
     { name: "Projects", href: "/projects" },
     { name: "Blog", href: "/blogs" },
     { name: "Team", href: "/team" },
+    { name: "Submission", href: "/submit-articles" },
     { name: "Join Us", href: "/join-us" },
   ];
 
   const resources = [
     { name: "Publications", href: "/blogs" },
-    { name: "Research Papers", href: "/projects" },
-    { name: "Be a Member", href: "/join-us" },
+    { name: "Documentation", href: "/termsAndConditions" },
     { name: "Community", href: "https://www.instagram.com/sandbox_scholars/", external: true },
     { name: "Support", href: "mailto:sandboxscholars.team@gmail.com", mailto: true },
     { name: "Ask Questions", href: "mailto:sandboxscholars.team@gmail.com?subject=Question", mailto: true }
@@ -51,7 +51,7 @@ function Footer() {
               <div className="w-10 h-10 rounded-lg flex items-center justify-center">
   <a href="/">
     <img 
-      src="/src/assets/logo.svg" 
+      src="/logo.svg" 
       alt="Organization Logo" 
       className="w-12 h-12"
     />

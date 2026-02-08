@@ -63,7 +63,7 @@ export default function HeroSection() {
 
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-              <span className="text-blue-700 text-4xl md:text-5xl italic">"Sandbox Scholars"</span>
+              <h1 class="text-4xl md:text-5xl font-bold text-[#82afdc] mb-4 italic">Sandbox Scholars</h1>
               <span className="block mt-4">Where Students</span>
               <span className="relative">
                 <span className="text-blue-700">Innovate</span>

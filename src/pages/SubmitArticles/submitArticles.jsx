@@ -138,7 +138,7 @@ function SubmitArticles() {
             </div>
             
             <h1 className="text-4xl md:text-5xl font-bold text-deepCharcoal mb-6">
-              Submit Your <span className="text-brandPrimary">Article</span>
+              Submit Your <span className="text-brandPrimary">Projects & Articles</span>
             </h1>
             
             <p className="text-xl text-darkCool max-w-3xl mx-auto leading-relaxed">
@@ -259,7 +259,7 @@ function SubmitArticles() {
                 <div className="mt-8 p-6 bg-gradient-to-r from-brandPrimary/5 to-brandSecondary/5 rounded-lg border border-lightCool">
                   <h4 className="font-bold text-deepCharcoal mb-3">Formatting Guidelines</h4>
                   <ul className="space-y-2 text-sm text-darkCool">
-                    <li>• Use our <a href="/templates/article-template.docx" className="text-brandPrimary hover:underline">article template</a></li>
+                    <li>• Use our <a href="/templates/submissionTemplate.docx" className="text-brandPrimary hover:underline"> template</a></li>
                     <li>• Font: Times New Roman or Arial, 12pt</li>
                     <li>• Line spacing: 1.5</li>
                     <li>• Margins: 1 inch on all sides</li>
@@ -284,7 +284,7 @@ function SubmitArticles() {
               <div className="bg-gradient-to-br from-brandPrimary/5 to-brandSecondary/5 rounded-xl border border-lightCool p-6">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-deepCharcoal mb-4">
-                    Send your article to: <span className="text-brandPrimary">articles@dailyscholar.org</span>
+                    Send your projects and articles to: <span className="text-brandPrimary">sandboxscholars.team@gmail.com</span>
                   </h3>
                   <p className="text-darkCool mb-6">
                     Please ensure your email includes all of the following:
@@ -447,18 +447,18 @@ function SubmitArticles() {
                   className="inline-flex items-center gap-3 px-8 py-3 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-brandSecondary hover:shadow-xl transition-all"
                 >
                   <FiMail className="w-5 h-5" />
-                  Submit Article via Email
+                  Submit via Email
                 </a>
                 <a 
                   href="/templates/article-template.docx"
                   className="inline-flex items-center gap-3 px-8 py-3 bg-paperWhite border-2 border-lightCool text-deepCharcoal rounded-xl font-semibold hover:border-brandTertiary hover:shadow-lg transition-all"
                 >
                   <FiFileText className="w-5 h-5" />
-                  Download Article Template
+                  Download Submission Template
                 </a>
               </div>
               <p className="text-sm text-darkCool mt-6">
-                Questions? Email <span className="text-brandPrimary font-medium">editor@dailyscholar.org</span>
+                Questions? Email <span className="text-brandPrimary font-medium">nafisfuad2024@gmail.com</span>
               </p>
             </div>
           </div>

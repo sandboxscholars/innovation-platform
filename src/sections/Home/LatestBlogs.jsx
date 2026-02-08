@@ -145,7 +145,7 @@ function LatestBlogs() {
                 <span className="text-darkCool font-medium">
                   Want to contribute your own article?
                 </span>
-                <Link to="/submit-articles" className="inline-flex items-center gap-2 px-6 py-2 bg-brandPrimary text-pureWhite rounded-full font-semibold hover:bg-brandSecondary transition-colors">
+                <Link to="/submission" className="inline-flex items-center gap-2 px-6 py-2 bg-brandPrimary text-pureWhite rounded-full font-semibold hover:bg-brandSecondary transition-colors">
                   Submit Article
                   <FaArrowRight className="w-4 h-4" />
                 </Link>
