@@ -17,52 +17,50 @@ export default function JoinUs() {
   // Requirements list
   const requirements = [
     {
-      title: "Academic Standing",
-      description: "Currently enrolled as a full-time student in any recognized educational institution",
+      title: "Learning Mindset",
+      description: "Curiosity and passion fuel a desire to learn, so we're looking for students ready to embrace new challenges having a mindset of learning.",
       icon: FiUser
     },
     {
       title: "Time Commitment",
-      description: "Ability to dedicate 5-10 hours per week for project work and team meetings",
+      description: "Flexible time Commitment depending on the role, with most positions requiring around 8–10 hours weekly.",
       icon: FiClock
     },
     {
       title: "Passion for Innovation",
-      description: "Demonstrated interest in technology, research, or creative problem-solving",
+      description: "A strong interest in technology, driven by curiosity in research, with a focus on creative problem-solving. Combining curiosity and technical skills to tackle complex challenges.",
       icon: FiTarget
     },
     {
       title: "Collaborative Spirit",
-      description: "Willingness to work in teams and contribute to collective success",
+      description: "We value students who are eager to collaborate and contribute to team success. Collaboration and teamwork are key.",
       icon: FiUsers
     },
   ];
 
   // What to include in application
   const applicationItems = [
-    "Current CV/Resume highlighting relevant experience",
-    "Academic transcript (unofficial copy is acceptable)",
+    "CV / Resume: Include your current CV or resume, emphasizing relevant academic, professional, and project experience.",
+    "Portfolio (if applicable): Provide a portfolio showcasing previous projects or work relevant to your area of interest.",
     "Portfolio of previous projects (if applicable)",
-    "Statement of purpose (max 500 words)",
-    "Preferred role and project interests",
-    "Availability schedule for the upcoming semester",
+    "Statement of Purpose: A brief essay (maximum 100 words) outlining your motivations, goals, and reasons for applying.",
+    "Preferred Role and Project Interests: Indicate the roles and projects you are most interested in pursuing.",
+    "Availability Schedule: Share your availability in an International Time format.",
   ];
 
   // Available positions
   const availablePositions = [
     {
-      title: "Research Associate",
-      department: "Research & Development",
+      title: "Digital Journalist",
+      department: "Communications",
       type: "Part-time",
-      duration: "6 months",
-      requirements: ["Research methodology", "Data analysis", "Academic writing"],
+      requirements: ["Strong communication", "Academic writing"],
       icon: FiFileText
     },
     {
       title: "Frontend Developer",
       department: "Technology",
       type: "Project-based",
-      duration: "3-4 months",
       requirements: ["React.js", "JavaScript", "CSS/HTML"],
       icon: FiFileText
     },
@@ -70,31 +68,27 @@ export default function JoinUs() {
       title: "Content Writer",
       department: "Communications",
       type: "Volunteer",
-      duration: "Ongoing",
       requirements: ["Technical writing", "SEO basics", "Content strategy"],
       icon: FiFileText
     },
     {
       title: "Project Coordinator",
       department: "Management",
-      type: "Part-time",
-      duration: "8 months",
-      requirements: ["Project management", "Team coordination", "Communication"],
+      type: "Project-based",
+      requirements: ["Project management", "Team coordination", "Strong communication"],
       icon: FiFileText
     },
     {
       title: "UI/UX Designer",
       department: "Design",
       type: "Project-based",
-      duration: "3 months",
-      requirements: ["Figma", "User research", "Prototyping"],
+      requirements: ["Canva", "User research", "Prototyping"],
       icon: FiFileText
     },
     {
       title: "Data Analyst",
       department: "Research",
       type: "Part-time",
-      duration: "4 months",
       requirements: ["Python/R", "Statistics", "Data visualization"],
       icon: FiFileText
     },
@@ -103,11 +97,11 @@ export default function JoinUs() {
   // Email information to include
   const emailInfo = [
     "Subject line: [Position] Application - [Your Name]",
-    "Brief introduction about yourself",
-    "Why you're interested in joining",
-    "Relevant skills and experience",
-    "Your availability",
-    "Attach all required documents",
+    "Brief introduction about yourself: A short overview of who you are and your academic or professional background.",
+    "Statement of Interest: Explain why you are interested in joining and what motivates your application.",
+    "Relevant skills and experience: Highlight skills, coursework, or experiences relevant to the position.",
+    "Your availability: Specify your availability in an International Time format.",
+    "Include all required application documents as outlined in the application requirements.",
   ];
 
   return (
@@ -134,23 +128,8 @@ export default function JoinUs() {
             </p>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            {[
-              { value: "200+", label: "Active Members" },
-              { value: "50+", label: "Projects Completed" },
-              { value: "15+", label: "Disciplines" },
-              { value: "100%", label: "Student-Led" },
-            ].map((stat, index) => (
-              <div 
-                key={index}
-                className="bg-pureWhite p-4 rounded-xl border border-lightCool text-center"
-              >
-                <div className="text-2xl font-bold text-brandPrimary mb-1">{stat.value}</div>
-                <div className="text-sm text-darkCool">{stat.label}</div>
-              </div>
-            ))}
-          </div>
+          {/* Stats REMOVED */}
+         
         </div>
       </section>
 
@@ -215,9 +194,9 @@ export default function JoinUs() {
                 <div className="mt-8 p-6 bg-gradient-to-r from-brandPrimary/5 to-brandSecondary/5 rounded-lg border border-lightCool">
                   <h4 className="font-bold text-deepCharcoal mb-3">Important Notes</h4>
                   <ul className="space-y-2 text-sm text-darkCool">
-                    <li>• All documents should be in PDF format</li>
-                    <li>• Maximum file size: 10MB per document</li>
-                    <li>• Application review takes 7-10 business days</li>
+                    <li>• This is a <b>voluntary</b> position</li>
+                    <li>• You must be able to proficiently speak and communicate in <b>English</b> proficiently.</li>
+                    <li>• Application process may take 7-10 business days</li>
                     <li>• You may apply for multiple positions</li>
                   </ul>
                 </div>
@@ -238,7 +217,7 @@ export default function JoinUs() {
               <div className="bg-gradient-to-br from-brandPrimary/5 to-brandSecondary/5 rounded-xl border border-lightCool p-6">
                 <div className="mb-6">
                   <h3 className="text-xl font-bold text-deepCharcoal mb-4">
-                    Send your application to: <span className="text-brandPrimary">join@dailyscholar.org</span>
+                    Send your application to: <span className="text-brandPrimary">sandboxscholars.team@gmail.com</span>
                   </h3>
                   <p className="text-darkCool mb-4">
                     Please ensure your email includes the following information:
@@ -263,8 +242,8 @@ export default function JoinUs() {
 
                 <div className="mt-8 p-4 bg-pureWhite rounded-lg border border-lightCool">
                   <p className="text-sm text-darkCool text-center">
-                    <span className="font-bold text-brandPrimary">Response Time:</span> 
-                    We typically respond within 5-7 business days. If you don't hear back, 
+                    <span className="font-bold text-brandPrimary">Response Time: </span> 
+                    We typically respond within 2 days. If you don't hear back, 
                     feel free to send a follow-up email.
                   </p>
                 </div>
@@ -309,17 +288,15 @@ export default function JoinUs() {
                               </span>
                             </div>
                           </div>
-                          <FiArrowRight className="w-4 h-4 text-darkCool group-hover:text-brandPrimary transition-colors" />
+                          
                         </div>
 
                         <div className="flex items-center justify-between text-sm text-darkCool mb-3">
                           <div className="flex items-center gap-1">
-                            <FiCalendar className="w-3 h-3" />
+                            
                             <span>{position.duration}</span>
                           </div>
-                          <div className="text-xs font-medium text-brandPrimary">
-                            Apply Now
-                          </div>
+                          
                         </div>
 
                         {/* Requirements Tags */}
@@ -347,9 +324,9 @@ export default function JoinUs() {
                     <h4 className="font-bold text-deepCharcoal mb-3">Application Timeline</h4>
                     <div className="space-y-3">
                       {[
-                        { step: "Application Review", duration: "7-10 days" },
+                        { step: "Application Review", duration: "2 days" },
                         { step: "Interview Stage", duration: "1-2 weeks" },
-                        { step: "Final Decision", duration: "3-5 days" },
+                        { step: "Final Decision", duration: "1 day" },
                         { step: "Onboarding", duration: "1 week" },
                       ].map((item, index) => (
                         <div key={index} className="flex items-center justify-between text-sm">
@@ -368,7 +345,7 @@ export default function JoinUs() {
                 <ul className="space-y-3">
                   {[
                     "Hands-on project experience",
-                    "Professional mentorship",
+                    "Teamwork Experience",
                     "Networking opportunities",
                     "Portfolio development",
                     "Skill certification",
@@ -398,16 +375,21 @@ export default function JoinUs() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="mailto:join@dailyscholar.org"
+                  href="mailto:sandboxscholars.team@gmail.com"
                   className="inline-flex items-center gap-3 px-8 py-3 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-brandSecondary hover:shadow-xl transition-all"
                 >
                   <FiMail className="w-5 h-5" />
                   Send Application Email
                 </a>
-                <button className="inline-flex items-center gap-3 px-8 py-3 bg-paperWhite border-2 border-lightCool text-deepCharcoal rounded-xl font-semibold hover:border-brandTertiary hover:shadow-lg transition-all">
-                  Download Application Guide
-                  <FiExternalLink className="w-5 h-5" />
-                </button>
+                <a 
+  href="/guidebooks/application_guidebook_sandbox_scholars.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-flex items-center gap-3 px-8 py-3 bg-paperWhite border-2 border-lightCool text-deepCharcoal rounded-xl font-semibold hover:border-brandTertiary hover:shadow-lg transition-all"
+>
+  Download Application Guide
+  <FiExternalLink className="w-5 h-5" />
+</a>
               </div>
             </div>
           </div>
