@@ -1,134 +1,117 @@
-// NOTE for Developers:
-// - This component renders two types of sections based on the "sections" array.
-//   1. sandbox Scholar section (type === "sandbox")
-//   2. Regular KeyPoint section (type === "point")
-// - Comments have been added in the appropriate places throughout the file.
-// - If you need to update or add comments in the future, please follow the existing pattern
-//   and place them in the same logical spots (above layout wrappers, data arrays, and key elements).
-
 import React from "react";
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import { FiTarget, FiBookOpen, FiUsers, FiZap } from "react-icons/fi";
 
 export default function KeyPoints() {
-  // Section data (sandbox + KeyPoints)
+  // Section data - Now 4 cards in 2x2 grid
   const sections = [
     {
-      id: "sandbox", // Special sandbox Scholar section
-      type: "sandbox",
-      title: "Sandbox Scholars",
-      subtitle: "STUDENT INNOVATION NETWORK...",
-      content1:
-        "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.",
-      content2:
-        "reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-      content3: "reprehenderit in voluptate velit esse cillum dolore",
-      quoteTitle: "A place for innovation",
-      quoteSubtitle: "A place to grow indefinitely",
-    },
-    {
       id: 1,
-      type: "point", // Regular KeyPoint
+      type: "point",
       img_name: "thinking",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      author: "Duis aute iru",
+      icon: FiTarget,
+      title: "Critical Problem Solving",
+      description: "Cultivating complex challenges through innovation and free thinking is what we strive for. Multiple angles and scenarios are considered when systematic approaches are taken.",
+      author: "Student Innovation Team",
     },
     {
       id: 2,
       type: "point",
       img_name: "knowledge",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      author: "Duis aute iru",
+      icon: FiBookOpen,
+      title: "Knowledge Application",
+      description: "Bridging theoretical learning with practical implementation. Our programs emphasize applying classroom knowledge to real-world scenarios.",
+      author: "Academic Mentors",
     },
     {
       id: 3,
       type: "point",
       img_name: "idea",
-      title: "Lorem ipsum dolor sit amet",
-      description:
-        "consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      author: "Duis aute iru",
+      icon: FiZap,
+      title: "Creative Ideation",
+      description: "Ideas are allowed to flow openly in our free environment. Encouraging out of the box thinking to develop innovative concepts into viable projects.",
+      author: "Creative Directors",
+    },
+    {
+      id: 4,
+      type: "point",
+      img_name: "engagement", // Assuming you have this image
+      img: "/workspaces/innovation-platform/dist/images/engagement.svg",
+      icon: FiUsers,
+      title: "Collaborative Innovation",
+      description: "Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects.",
+      author: "Project Coordinators",
     },
   ];
 
-  return (
-    <div className="max-w-screen-xl mx-auto mb-6">
-      {/* Parent grid layout: single column on mobile, two columns on desktop */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
-        {sections.map((item) =>
-          item.type === "sandbox" ? (
-            // sandbox Scholar Layout
-            <div
-              key={item.id}
-              className="bg-[var(--secondary-background)] border-y-3 border-e-3 border-[var(--border-color)] px-5 rounded-tr-sm rounded-br-sm -mt-[20%] max-w-[85%] mx-auto"
-            >
-              {/* Title */}
-              <p className="font-playfair-boldItalic text-5xl py-2">
-                {item.title}
-              </p>
-
-              {/* Subtitle */}
-              <p className="font-poppins font-medium text-lg">
-                {item.subtitle}
-              </p>
-
-              {/* Main content paragraphs */}
-              <p className="font-poppins font-medium text-lg my-5">
-                {item.content1}
-              </p>
-              <p className="font-poppins font-medium text-lg mt-5">
-                {item.content2}
-              </p>
-              <p className="font-poppins font-medium text-lg mb-2">
-                {item.content3}
-              </p>
-
-              {/* Quote block */}
-              <ImQuotesLeft className="size-12" />
-              <div className="flex mb-5">
-                <div>
-                  <p className="text-[var(--primary-color)] font-neue-ultraBold md:text-4xl md:leading-8">
-                    {item.quoteTitle}
-                  </p>
-                  <div className="flex mt-1">
-                    <p className="font-zawi-bold md:text-lg text-[var(--foreground-color)]/78">
-                      {item.quoteSubtitle}
-                    </p>
-                    <sup>
-                      <ImQuotesRight className="size-6 ms-1" />
-                    </sup>
-                  </div>
-                </div>
-                {/* Decorative hash symbol */}
-                <p className="font-rig-bold md:text-8xl me-3">#</p>
-              </div>
-            </div>
-          ) : (
-            // Regular KeyPoint Layout
-            <div
-              key={item.id}
-              className="flex justify-center space-x-6 items-center bg-[var(--primary-color)]/15 rounded-4xl px-6 py-8 max-w-[85%] mx-auto mt-auto"
-            >
-              {/* KeyPoint icon */}
-              <img
-                src={`/images/${item.img_name}.svg`}
-                alt={item.img_name}
-                className="w-24 object-contain"
-              />
-
-              {/* KeyPoint text content */}
-              <div className="text-[var(--foreground-color)]">
-                <p className="font-semibold text-lg">{item.title}</p>
-                <p className="text-[17px] mt-1">{item.description}</p>
-                <p className="text-[17px] font-semibold mt-3">{item.author}</p>
-              </div>
-            </div>
-          )
-        )}
+  return ( 
+  <section className="bg-paperWhite pb-4">
+    <div className="max-w-7xl mx-auto mb-12 md:mb-16 px-4 md:px-6">
+      {/* Header Section */}
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center gap-2 px-4 py-2 bg-brandPrimary/10 rounded-full mb-4">
+          <FiTarget className="w-4 h-4 text-brandPrimary" />
+          <span className="text-brandPrimary font-medium text-sm">Core Principles</span>
+        </div>
+        
+        <h2 className="text-3xl md:text-4xl font-bold text-deepCharcoal mb-4">
+          How We <span className="text-brandPrimary">Innovate</span>
+        </h2>
+        
+        <p className="text-lg text-darkCool max-w-2xl mx-auto">
+          Our approach combines structured methodology with creative freedom
+        </p>
       </div>
+
+      {/* KeyPoint Cards Grid - Adjusted for 4 cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        {sections.map((item) => (
+          <div
+            key={item.id}
+            className="flex gap-4 md:gap-6 items-start bg-pureWhite rounded-2xl px-6 py-6 md:px-8 md:py-8 shadow-sm border border-lightCool hover:shadow-md hover:border-brandTertiary transition-all duration-300"
+          >
+            {/* KeyPoint icon - Adjusted size */}
+            <div className="flex-shrink-0">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-brandPrimary/10 to-brandSecondary/10 flex items-center justify-center">
+                <img
+                  src={`/images/${item.img_name}.svg`}
+                  alt={item.img_name}
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                  onError={(e) => {
+                    // Fallback to icon if image doesn't exist
+                    e.target.style.display = 'none';
+                    const parent = e.target.parentElement;
+                    parent.innerHTML = `<${item.icon} class="w-6 h-6 md:w-8 md:h-8 text-brandPrimary" />`;
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* KeyPoint text content - Compact layout */}
+            <div className="flex-1 min-w-0"> {/* min-w-0 prevents overflow */}
+              <h3 className="text-lg md:text-xl font-bold text-brandPrimary mb-2 leading-tight">
+                {item.title}
+              </h3>
+              
+              <p className="text-darkCool text-sm md:text-[15px] leading-relaxed mb-4 line-clamp-3">
+                {item.description}
+              </p>
+              
+              <div className="pt-3 border-t border-lightCool">
+                <p className="text-sm md:text-[15px] font-semibold text-brandSecondary">
+                  {item.author}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Stats or Additional Info - Compact - REMOVED*/}
+      
+
+      {/* Optional: CTA Button - REMOVED*/}
+      
     </div>
+  </section>
   );
 }

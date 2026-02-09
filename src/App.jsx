@@ -1,10 +1,29 @@
+
+
 import { useState } from 'react';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import './App.css';
 
+import { ThemeProvider } from "./context/ThemeContext.jsx";
+import { HashRouter as Router } from 'react-router-dom';
+
 import Navbar from './components/Navbar';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer';
+
+import About from './pages/About/About';
+import Blogs from './pages/Blogs/Blogs';
+import Projects from './pages/Projects/projects';
+import JoinUs from './pages/JoinUs/joinUs';
+import SubmitArticles from './pages/SubmitArticles/submitArticles';
+import Team from './pages/team/team'
+
+//  IMPORT AS MUCH AS NECESSARY
+import ContentTemplate from './pages/Content/AAAtemplate';
+import TermsAndConditions from "./pages/TermsAndConditions/termsAndConditions";
+import ContactPage from "./pages/ContactPage/contactPage"
+
+
 
 
 //- Global wrapper/Layout for all pages
@@ -16,28 +35,30 @@ function Layout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
-      {/* Navbar shifts right when menu is open */}
-      <div
-        className={`transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-64' : 'translate-x-0'
-        }`}
-      >
-        <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      </div>
+    
+        <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+        {/* Navbar shifts right when menu is open */}
+        <div
+          className={`transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-64' : 'translate-x-0'
+          }`}
+        >
+          <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        </div>
 
-      {/* Page content also shifts right */}
-      <div
-        className={`flex-1 overflow-auto transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-64' : 'translate-x-0'
-        }`}
-      >
-        <Outlet />
-      </div>
-      <div>
-        <Footer />
-      </div>
-    </div>
+        {/* Page content also shifts right */}
+        <div
+          className={`flex-1 overflow-auto transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? 'translate-x-64' : 'translate-x-0'
+          }`}
+        >
+          <Outlet />
+        </div>
+        <div>
+          <Footer />
+        </div>
+        </div>
+    
   );
 }
 
@@ -53,6 +74,15 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/join-us" element={<JoinUs />} />
+          <Route path="/submission" element={<SubmitArticles />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/content-template-private" element={<ContentTemplate />} />
+          <Route path="/termsAndConditions" element={<TermsAndConditions />} />
+          <Route path="/contact" element={<ContactPage />} /> 
           {/* Add more routes as needed(More Pages e.g. Blogs, Clubs, About Us etc) */}
         </Route>
       </Routes>

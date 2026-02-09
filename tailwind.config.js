@@ -58,6 +58,7 @@ export default {
           '"Agrandir Narrow"',
           '"Playfair Display"',
           ...fontFamily.serif,
+
         ],
         display: [
           '"Rig Solid Bold Halftone"',

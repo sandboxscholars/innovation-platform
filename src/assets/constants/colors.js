@@ -59,3 +59,40 @@ export const colors = {
       primary: colors.brandTertiary
     }
   };
+
+  {/**
+    export const colors = {
+  // Core branding colors (UNCHANGED – identity anchor)
+  brandPrimary: '#12418d',       // Deep blue
+  brandSecondary: '#2f84a9',     // Medium blue
+  brandTertiary: '#8ecaef',      // Light blue
+
+  // Accent colors (REDESIGNED – replaces orange functionally)
+  accentPrimary: '#00b4d8',      // Electric cyan (high-visibility highlight)
+  accentSecondary: '#3dd5f3',    // Sky cyan (secondary emphasis)
+  accentTertiary: '#90e0ef',     // Ice blue (soft highlight / decorative)
+
+  // Neutral colors (mostly preserved)
+  pureWhite: '#ffffff',
+  paperWhite: '#f8f8ff',
+  lightWarm: '#eef6fb',          // Shifted to cool-neutral
+  lightCool: '#e6f0f6',
+  mediumNeutral: '#cfd8dc',      // Cool gray
+  warmGray: '#b0bec5',
+  darkWarm: '#8d99a6',
+  darkCool: '#5f6f7a',
+  charcoal: '#4a5560',
+  deepCharcoal: '#2f363d',
+  pureBlack: '#000000',
+
+  // Special colors
+  eggplant: '#5e376d',           // Kept for contrast sections
+  navy: '#001f3d',
+
+  // System / semantic colors (tightened)
+  successGreen: '#2e7d32',
+  errorRed: '#d32f2f',
+  alertYellow: '#f9c74f',        // Muted, controlled
+  infoBlue: '#0288d1'
+};
+ */}
