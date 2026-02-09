@@ -23,10 +23,10 @@ function SubmitArticles() {
   // Article categories we encourage
   const encouragedCategories = [
     {
-      title: "Research Papers",
+      title: "Research Articles",
       description: "Academic research with proper methodology and findings",
       icon: FiBookOpen,
-      examples: ["Case studies", "Experimental results", "Literature reviews"],
+      examples: ["Case studies", "Experimental results", "Literature reviews", "Scientific Explanation"],
       color: "brandPrimary"
     },
     {
@@ -74,7 +74,7 @@ function SubmitArticles() {
     },
     {
       title: "Length Guidelines",
-      description: "800-2000 words for most articles, 3000+ for research",
+      description: "500-2000 words for most articles, 2000+ for research",
       icon: FiClock,
       mandatory: false
     },
@@ -96,18 +96,18 @@ function SubmitArticles() {
   const emailInfo = [
     "Subject line: Article Submission - [Article Title]",
     "Author name(s) and affiliation",
-    "Article title and abstract (max 250 words)",
+    "Article title and abstract (max 150 words)",
     "Target category (Research, Tutorial, etc.)",
     "Word count and estimated reading time",
-    "Attach article as .docx or .pdf",
+    "Attach article as .docx or .pdf or .md",
     "Include any supporting files/images",
   ];
 
   // Review process timeline
   const reviewProcess = [
-    { step: "Initial Review", duration: "3-5 days", description: "Format and basic requirements check" },
-    { step: "Content Review", duration: "7-10 days", description: "Editorial team evaluates content quality" },
-    { step: "Peer Feedback", duration: "5-7 days", description: "Optional feedback from student reviewers" },
+    { step: "Initial Review", duration: "3 days", description: "Format and basic requirements check" },
+    { step: "Content Review", duration: "3 days", description: "Editorial team evaluates content quality" },
+    { step: "Peer Feedback", duration: "1 day", description: "Optional feedback from student reviewers" },
     { step: "Final Decision", duration: "2-3 days", description: "Acceptance/rejection notification" },
     { step: "Publication", duration: "3-5 days", description: "Editing and publishing if accepted" },
   ];
@@ -147,12 +147,13 @@ function SubmitArticles() {
             </p>
           </div>
 
-          {/* Stats */}
+          {/*DISABLED STATS....
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             {[
-              { value: "200+", label: "Articles Published" },
-              { value: "50+", label: "Student Authors" },
-              { value: "10k+", label: "Monthly Readers" },
+              { value: "20+", label: "Articles Published" },
+              { value: "10+", label: "Student Authors" },
+              { value: "Outstanding", label: "Project impact" },
               { value: "85%", label: "Acceptance Rate" },
             ].map((stat, index) => (
               <div 
@@ -164,6 +165,10 @@ function SubmitArticles() {
               </div>
             ))}
           </div>
+          
+          
+          */}
+
         </div>
       </section>
 
@@ -259,11 +264,10 @@ function SubmitArticles() {
                 <div className="mt-8 p-6 bg-gradient-to-r from-brandPrimary/5 to-brandSecondary/5 rounded-lg border border-lightCool">
                   <h4 className="font-bold text-deepCharcoal mb-3">Formatting Guidelines</h4>
                   <ul className="space-y-2 text-sm text-darkCool">
-                    <li>• Use our <a href="/templates/submissionTemplate.docx" className="text-brandPrimary hover:underline"> template</a></li>
+                    <li>• Use our <a href="/guidebooks/submission_guidebook_sandbox_scholars.pdf" className="text-brandPrimary hover:underline">template</a></li>
                     <li>• Font: Times New Roman or Arial, 12pt</li>
                     <li>• Line spacing: 1.5</li>
-                    <li>• Margins: 1 inch on all sides</li>
-                    <li>• Include abstract (max 250 words)</li>
+                    <li>• Include abstract (max 150 words)</li>
                     <li>• Add 3-5 relevant keywords</li>
                   </ul>
                 </div>
@@ -308,8 +312,8 @@ function SubmitArticles() {
                 <div className="p-4 bg-pureWhite rounded-lg border border-lightCool">
                   <h4 className="font-bold text-deepCharcoal mb-2">Response Timeline</h4>
                   <p className="text-sm text-darkCool">
-                    You'll receive an acknowledgment within <span className="font-bold text-brandPrimary">24 hours</span>. 
-                    The full review process typically takes <span className="font-bold text-brandPrimary">2-3 weeks</span>. 
+                    You'll receive an acknowledgment within <span className="font-bold text-brandPrimary">48 hours</span>. 
+                    The full review process typically takes <span className="font-bold text-brandPrimary">2 weeks</span>. 
                     We'll notify you of our decision via email.
                   </p>
                 </div>
@@ -364,7 +368,7 @@ function SubmitArticles() {
               {/* Popular Topics */}
               <div className="bg-pureWhite rounded-xl border border-lightCool p-6">
                 <h3 className="font-bold text-deepCharcoal mb-4 flex items-center gap-2">
-                  <FiSearch className="w-5 h-5 text-brandPrimary" />
+                  <FiTrendingUp className="w-5 h-5 text-brandPrimary" />
                   Popular Topics
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -443,14 +447,14 @@ function SubmitArticles() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="mailto:articles@dailyscholar.org"
+                  href="mailto:sandboxscholars.team@gmail.com"
                   className="inline-flex items-center gap-3 px-8 py-3 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-brandSecondary hover:shadow-xl transition-all"
                 >
                   <FiMail className="w-5 h-5" />
                   Submit via Email
                 </a>
                 <a 
-                  href="/templates/article-template.docx"
+                  href="/guidebooks/submission_guidebook_sandbox_scholars.pdf"
                   className="inline-flex items-center gap-3 px-8 py-3 bg-paperWhite border-2 border-lightCool text-deepCharcoal rounded-xl font-semibold hover:border-brandTertiary hover:shadow-lg transition-all"
                 >
                   <FiFileText className="w-5 h-5" />

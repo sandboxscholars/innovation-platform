@@ -34,8 +34,11 @@ function About() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              A student-led non-profit organization dedicated to fostering innovation, 
+              A student-led organization dedicated to fostering innovation, 
               creativity, and real-world impact through collaborative projects.
+            </p>
+                        <p className="text-xl md:text-1xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              <b>Why you should join in 3 lines:</b> You'll learn to work with teams and build actual scalable projects for practical usage. You will get to experience a friendly work culture filled with enthusiastic minds you can collaborate with. <i>We don't need the third line.</i>
             </p>
           </div>
         </div>
@@ -55,7 +58,7 @@ function About() {
             <p className="text-lg text-gray-700 leading-relaxed">
               To empower students with the tools, knowledge, and network needed to 
               transform innovative ideas into impactful solutions that address 
-              real-world challenges. Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects
+              real-world challenges. Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects.
             </p>
             <div className="mt-8 pt-6 border-t border-gray-100">
               <span className="text-orange-600 font-semibold">Focus Areas:</span>
@@ -121,7 +124,7 @@ function About() {
               },
               { 
                 title: 'Student-Led', 
-                description: 'Empowering students to take initiative and lead projects that matter to them.',
+                description: 'Empowering students to take initiative and lead projects that matter to them. And most importantly, we are kinda chill.',
               },
             ].map((value, index) => (
               <div 
