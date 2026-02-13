@@ -377,7 +377,10 @@ const regularMembers = processedMembers.filter(m => !m.featured);
               <img
                 src={member.image}
                 alt={member.name}
-                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover transition-opacity duration-300 opacity-0"
+                onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
               />
             ) : (
               <div className="flex items-center justify-center h-full font-bold text-xl text-deepCharcoal">
