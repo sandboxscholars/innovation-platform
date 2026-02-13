@@ -112,9 +112,9 @@ function Team() {
       email: "career.agarwal@gmail.com",
       contact: "01789792248",
       roles: ["Data Analyst"],
-      type: 1,
+      type: 0,
       joinDate: "July 2025",
-      status: "Active",
+      status: "Alumni",
       link: "#"
     },
     {
@@ -156,9 +156,9 @@ function Team() {
       email: "ronjitsanyal85@gmail.com",
       contact: "Facebook Profile",
       roles: ["Content Writer"],
-      type: 1,
+      type: 0,
       joinDate: "September 2025",
-      status: "Active",
+      status: "Alumni",
       link: "https://www.facebook.com/laijoti"
     },
     {

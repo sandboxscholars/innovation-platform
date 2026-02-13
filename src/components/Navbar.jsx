@@ -86,7 +86,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
 
             {/* Right Side Actions */}
             <div className="flex items-center gap-4">
-              {/* Theme Toggle */}
+              {/* Theme Toggle DISABLED FOR ERRORS
               <button
                 ref={ref}
                 onClick={toggleSwitchTheme}
@@ -99,7 +99,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
                   <FiSun className="w-4 h-4" />
                 )}
               </button>
-
+              */}
               {/* Join Button */}
               <Button 
                 variant="default" 
@@ -117,7 +117,8 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
       </nav>
 
       {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className={`h-${scrolled ? '12' : '14'}`}></div>
+      <div className={scrolled ? "h-12" : "h-14"}></div>
+
 
       {/* Overlay via portal */}
       {isMenuOpen &&
@@ -171,7 +172,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
               ))}
             </ul>
 
-            {/* Mobile Theme Toggle */}
+            {/* Mobile Theme Toggle DISABLED FOR ERRORS
             <div className="mt-auto pt-8 border-t border-pureWhite/20">
               <button
                 onClick={toggleSwitchTheme}
@@ -187,6 +188,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }) {
                 )}
               </button>
             </div>
+             */}
           </div>
         </div>,
         document.body

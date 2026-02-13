@@ -11,7 +11,7 @@ export default function KeyPoints() {
       icon: FiTarget,
       title: "Critical Problem Solving",
       description: "Cultivating complex challenges through innovation and free thinking is what we strive for. Multiple angles and scenarios are considered when systematic approaches are taken.",
-      author: "Student Innovation Team",
+      author: "> Experiment!",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ export default function KeyPoints() {
       icon: FiBookOpen,
       title: "Knowledge Application",
       description: "Bridging theoretical learning with practical implementation. Our programs emphasize applying classroom knowledge to real-world scenarios.",
-      author: "Academic Mentors",
+      author: ">> Lead!",
     },
     {
       id: 3,
@@ -29,17 +29,16 @@ export default function KeyPoints() {
       icon: FiZap,
       title: "Creative Ideation",
       description: "Ideas are allowed to flow openly in our free environment. Encouraging out of the box thinking to develop innovative concepts into viable projects.",
-      author: "Creative Directors",
+      author: ">>> Create!",
     },
     {
       id: 4,
       type: "point",
-      img_name: "engagement", // Assuming you have this image
-      img: "/workspaces/innovation-platform/dist/images/engagement.svg",
-      icon: FiUsers,
+      img_name: "paper", // Assuming you have this image
+      icon: FiUsers,  
       title: "Collaborative Innovation",
       description: "Teamwork is diversity. Our mission will always be about connecting students from various disciplines to create more well-rounded and impactful projects.",
-      author: "Project Coordinators",
+      author: ">>>> Together!",
     },
   ];
 
@@ -71,11 +70,11 @@ export default function KeyPoints() {
           >
             {/* KeyPoint icon - Adjusted size */}
             <div className="flex-shrink-0">
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-brandPrimary/10 to-brandSecondary/10 flex items-center justify-center">
+              <div className="w-15 h-18 md:w-16 md:h-18 rounded-xl bg-gradient-to-br from-brandPrimary/10 to-brandSecondary/10 flex items-center justify-center">
                 <img
                   src={`/images/${item.img_name}.svg`}
                   alt={item.img_name}
-                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                  className="w-11 h-11 md:w-11 md:h-11 object-contain"
                   onError={(e) => {
                     // Fallback to icon if image doesn't exist
                     e.target.style.display = 'none';

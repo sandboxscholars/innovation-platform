@@ -167,8 +167,8 @@ function Footer() {
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <a href="/termsAndConditions" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="/termsAndConditions" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="/termsAndConditions" className="hover:text-white transition-colors">Work Culture</a>
-            <a href="/termsAndConditions" className="hover:text-white transition-colors">More info</a>
+            <a href="/about-us" className="hover:text-white transition-colors">Work Culture</a>
+            <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
           </div>
         </div>
       </div>
