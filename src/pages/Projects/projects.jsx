@@ -11,6 +11,7 @@ import {
   FiChevronRight
 } from 'react-icons/fi';
 import { FaPython, FaJs, FaReact, FaNodeJs } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function projects() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -81,23 +82,22 @@ function projects() {
     },
     {
       id: 3,
-      title: 'Research Bootcamp 2024',
+      title: 'Research Bootcamp 2025: Fundamentals of Academic Research',
       description: 'A 6-week intensive program training students in research methodologies, data analysis, and academic writing for impactful student research.',
       category: 'research',
-      status: 'ongoing',
+      status: 'Completed',
       duration: '6 weeks',
       teamSize: 12,
       technologies: ['Research', 'Data Analysis', 'Academic Writing'],
       features: [
         'Weekly workshops & mentoring',
         'Research methodology training',
-        'Peer review sessions',
         'Final research paper submission'
       ],
       github: null,
       liveDemo: null,
-      researchPaper: '/papers/bootcamp-outcomes.pdf',
-      impact: 'Trained 50+ students in research methodologies',
+      researchPaper: '/guidebooks/COURSE_PLAN-FUNDAMENTALS_OF_RESEARCH.pdf',
+      impact: 'Trained 10+ students in research methodologies',
       thumbnail: '/images/research.svg'
     },
     {
@@ -216,9 +216,9 @@ function projects() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { label: "Active Projects", value: "8", icon: FiCode },
-              { label: "Research Papers", value: "12", icon: FiBookOpen },
-              { label: "Team Members", value: "50+", icon: FiUsers },
-              { label: "Impact Reach", value: "1000+", icon: FiCalendar },
+              { label: "Research Initiatives", value: "5+", icon: FiBookOpen },
+              { label: "Team Members", value: "20+", icon: FiUsers },
+              { label: "Impact Reach", value: "100+", icon: FiCalendar },
             ].map((stat, index) => (
               <div key={index} className="flex items-center gap-4 p-4">
                 <div className="w-12 h-12 rounded-xl bg-brandPrimary/10 flex items-center justify-center">
@@ -273,21 +273,8 @@ function projects() {
             ))}
           </div>
 
-          {/* Technology Tags */}
-          <div className="mb-12">
-            <h3 className="text-lg font-semibold text-deepCharcoal mb-4">Browse by Technology</h3>
-            <div className="flex flex-wrap gap-3">
-              {technologies.map((tech) => (
-                <button
-                  key={tech.name}
-                  className="flex items-center gap-2 px-4 py-2 bg-pureWhite border border-lightCool rounded-lg hover:border-brandTertiary transition-colors"
-                >
-                  <tech.icon className={`w-4 h-4 text-${tech.color}`} />
-                  <span className="text-darkCool text-sm">{tech.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
+          {/* Technology Tags  REMOVED*/}
+          
         </div>
 
         {/* Projects Grid */}
@@ -423,12 +410,12 @@ function projects() {
                   and mentorship to turn your concepts into impactful projects.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="px-8 py-3 bg-pureWhite text-brandPrimary rounded-xl font-semibold hover:bg-paperWhite transition-colors">
+                  <Link to="/submission" className="group px-8 py-3 bg-pureWhite text-brandPrimary rounded-xl font-semibold hover:bg-paperWhite transition-colors">
                     Propose a Project
-                  </button>
-                  <button className="px-8 py-3 bg-transparent border-2 border-pureWhite text-pureWhite rounded-xl font-semibold hover:bg-pureWhite/10 transition-colors">
+                  </Link>
+                  <Link to="/join-us" className="group px-8 py-3 bg-transparent border-2 border-pureWhite text-pureWhite rounded-xl font-semibold hover:bg-pureWhite/10 transition-colors">
                     Join Existing Team
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -442,9 +429,7 @@ function projects() {
               <h2 className="text-3xl font-bold text-deepCharcoal mb-2">Research Publications</h2>
               <p className="text-darkCool">Academic papers and research outcomes from our projects</p>
             </div>
-            <button className="text-brandPrimary hover:text-brandSecondary font-semibold">
-              View All Publications →
-            </button>
+           
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">

@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react';
 import { Route, Routes, Outlet } from 'react-router-dom';
 import './App.css';
@@ -70,6 +68,7 @@ function Layout() {
 
 export default function App() {
   return (
+    <ThemeProvider>
     <main>
       <Routes>
         <Route element={<Layout />}>
@@ -87,5 +86,6 @@ export default function App() {
         </Route>
       </Routes>
     </main>
+    </ThemeProvider>
   );
 }

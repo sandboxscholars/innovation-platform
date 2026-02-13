@@ -2,35 +2,42 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 import { FiCode, FiUsers, FiBookOpen, FiTarget } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
  
 export default function Projects_and_Vision() {
   const projects = [
     {
       id: 1,
-      title: "Student Innovation Bootcamps",
-      description: "Hands-on workshops where students learn cutting-edge technologies and develop practical solutions to real-world challenges through collaborative projects.",
-      icon: FiCode,
-    },
-    {
-      id: 2,
-      title: "Research & Publication Support",
-      description: "Guiding students through research methodology, data analysis, and academic publishing to produce impactful papers and presentations.",
+      title: "Financial Literacy Fundamentals",
+      description: "Practical insights that help students understand money, budgeting, and smart financial decision-making early in life.",
       icon: FiBookOpen,
     },
     {
+      id: 2,
+      title: "Digital Infrastructure & Automation",
+      description: "Focused on building the platform’s foundation, including web systems, automation tools, and productivity solutions.",
+      icon: FiCode,
+    },
+    {
       id: 3,
-      title: "Community Impact Projects",
-      description: "Initiatives that connect student creativity with community needs, fostering social responsibility through technology and innovation.",
+      title: "AI in Academic Research: NotebookLM",
+      description: "An analytical exploration of NotebookLM and its potential to enhance research efficiency and academic organization.",
+      icon: FiCode,
+    },
+    {
+      id: 4,
+      title: "How to Launch a Student Club",
+      description: "Leadership & Student Initiatives: A clear, student-focused guide that simplifies the real steps behind starting and sustaining a successful school organization.",
       icon: FiUsers,
     },
   ];
 
   const specialties = [
-    "Cross-disciplinary Collaboration",
-    "Research Methodology Training", 
+    "Interdisciplinary Collaboration",
+    "Structured Research Training", 
     "Project Development Guidance",
     "Community Engagement Focus",
-    "Academic & Industry Mentorship"
+    "Academic Focus with Real-World Application",
   ];
 
   return (
@@ -89,10 +96,13 @@ export default function Projects_and_Vision() {
                 </div>
 
                 {/* View More Button */}
-                <button className="mt-8 flex items-center gap-2 text-brandPrimary hover:text-brandSecondary font-medium group">
-                  Explore All Specialties
-                  <GoArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
+                <Link 
+  to="/projects" 
+  className="mt-8 flex items-center gap-2 text-brandPrimary hover:text-brandSecondary font-medium group"
+>
+  Explore All Projects
+  <GoArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+</Link>
               </div>
             </div>
           </div>
@@ -126,47 +136,16 @@ export default function Projects_and_Vision() {
                       {project.description}
                     </p>
                     
-                    <div className="flex items-center justify-between pt-4 border-t border-lightCool">
-                      <span className="text-sm text-darkCool">
-                        Learn more about this initiative
-                      </span>
-                      <button className="text-brandPrimary hover:text-brandSecondary transition-colors">
-                        <GoArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                      </button>
-                    </div>
+                   
                   </div>
                 </div>
               </div>
             ))}
 
             {/* Stats Banner */}
-            <div className="bg-gradient-to-r from-brandPrimary to-brandSecondary rounded-xl p-8 text-pureWhite">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-                {[
-                  { value: "30+", label: "Projects" },
-                  { value: "200+", label: "Students" },
-                  { value: "15+", label: "Research Papers" },
-                ].map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-3xl font-bold mb-2">{stat.value}</div>
-                    <div className="text-sm opacity-90">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="mt-6 pt-6 border-t border-pureWhite/20">
-                <p className="text-sm text-center opacity-90">
-                  Join our growing community of innovators
-                </p>
-              </div>
-            </div>
-
+            
             {/* CTA Button */}
-            <div className="text-center pt-4">
-              <Link to="/projects" className="group inline-flex items-center gap-3 px-8 py-4 bg-brandPrimary text-pureWhite rounded-xl font-semibold hover:bg-accentSecondary hover:shadow-lg transition-all">
-                Navigate to the<b>Projects</b>tab to learn more
-            </Link>
-            </div>
+            
           </div>
         </div>
       </div>

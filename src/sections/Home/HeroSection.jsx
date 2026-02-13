@@ -102,9 +102,9 @@ export default function HeroSection() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 py-6 border-y border-gray-200">
               {[
-                { value: "200+", label: "Active Members", icon: FiUsers },
-                { value: "50+", label: "Projects", icon: FiTarget },
-                { value: "30+", label: "Innovations", icon: FiZap },
+                { value: "20+", label: "Active Members", icon: FiUsers },
+                { value: "10+", label: "Projects", icon: FiTarget },
+                { value: "10+", label: "Innovations", icon: FiZap },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-blue-700 mb-1">{stat.value}</div>

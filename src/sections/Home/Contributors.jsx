@@ -133,9 +133,7 @@ export default function Contributors() {
                   <h3 className="text-2xl font-bold text-deepCharcoal mb-2">Featured Contributors</h3>
                   <p className="text-darkCool">Key members driving our current initiatives</p>
                 </div>
-                <button className="px-6 py-3 bg-brandPrimary text-pureWhite rounded-xl font-medium hover:bg-brandSecondary transition-colors whitespace-nowrap">
-                  People who made this possible
-                </button>
+                {/* Button - REMOVED */}
               </div>
               
               {/* Contributors Grid */}

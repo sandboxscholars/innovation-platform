@@ -25,7 +25,8 @@ function Team() {
       type: 2, // Star member
       joinDate: "July 2025",
       status: "Active",
-      link: "https://www.linkedin.com/in/nafis2024/"
+      link: "https://www.linkedin.com/in/nafis2024/",
+      image: "/profilePictures/nafis.jpg"
     },
     {
       id: 1,
@@ -36,7 +37,8 @@ function Team() {
       type: 2, // Star member
       joinDate: "July 2025",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: "/profilePictures/sunveer.jpg"
     },
     {
       id: 2,
@@ -47,7 +49,8 @@ function Team() {
       type: 2,
       joinDate: "September 2025",
       status: "Active",
-      link: "mailto:ishitareddyya2510@gmail.com"
+      link: "mailto:ishitareddyya2510@gmail.com",
+      image: "/profilePictures/ishita.png"
     },
     {
       id: 3,
@@ -58,7 +61,8 @@ function Team() {
       type: 2,
       joinDate: "September 2025",
       status: "Active",
-      link: "https://wa.me/+8801569174735"
+      link: "https://wa.me/+8801569174735",
+      image: ""
     },
     {
       id: 4,
@@ -69,7 +73,8 @@ function Team() {
       type: 2,
       joinDate: "November 2025",
       status: "Active",
-      link: "https://wa.me/+919544493837"
+      link: "https://wa.me/+919544493837",
+      image: "/profilePictures/althaf.jpg"
     },
     
     // Active Members (type 1)
@@ -82,7 +87,8 @@ function Team() {
       type: 0,
       joinDate: "July 2025",
       status: "Alumni",
-      link: "#"
+      link: "#",
+      image: ""
     },
     {
       id: 6,
@@ -93,7 +99,8 @@ function Team() {
       type: 1,
       joinDate: "July 2025",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: "/profilePictures/tawsif.jpg"
     },
     {
       id: 7,
@@ -104,7 +111,8 @@ function Team() {
       type: 1,
       joinDate: "July 2025",
       status: "Active",
-      link: "#"
+      link: "#",
+      image: "/profilePictures/adrita.jpg"
     },
     {
       id: 8,
@@ -112,10 +120,11 @@ function Team() {
       email: "career.agarwal@gmail.com",
       contact: "01789792248",
       roles: ["Data Analyst"],
-      type: 1,
+      type: 0,
       joinDate: "July 2025",
-      status: "Active",
-      link: "#"
+      status: "Alumni",
+      link: "#",
+      image: ""
     },
     {
       id: 9,
@@ -126,7 +135,8 @@ function Team() {
       type: 0,
       joinDate: "August 2025",
       status: "Alumni",
-      link: "https://www.facebook.com/share/1AGeVaDHzk/"
+      link: "https://www.facebook.com/share/1AGeVaDHzk/",
+      image: ""
     },
     {
       id: 10,
@@ -137,7 +147,8 @@ function Team() {
       type: 1,
       joinDate: "September 2025",
       status: "Active",
-      link: "https://wa.me/+8801608091959"
+      link: "https://wa.me/+8801608091959",
+      image: "/profilePictures/nahin.png"
     },
     {
       id: 11,
@@ -148,7 +159,8 @@ function Team() {
       type: 1,
       joinDate: "September 2025",
       status: "Active",
-      link: "https://wa.me/+8801896286943"
+      link: "https://wa.me/+8801896286943",
+      image: "/profilePictures/mahin.jpg"
     },
     {
       id: 12,
@@ -156,10 +168,11 @@ function Team() {
       email: "ronjitsanyal85@gmail.com",
       contact: "Facebook Profile",
       roles: ["Content Writer"],
-      type: 1,
+      type: 0,
       joinDate: "September 2025",
-      status: "Active",
-      link: "https://www.facebook.com/laijoti"
+      status: "Alumni",
+      link: "https://www.facebook.com/laijoti",
+      image: "/profilePictures/joty.jpg"
     },
     {
       id: 13,
@@ -170,18 +183,20 @@ function Team() {
       type: 1,
       joinDate: "September 2025",
       status: "Active",
-      link: "https://www.facebook.com/mubashhira.mahira"
+      link: "https://www.facebook.com/mubashhira.mahira",
+      image: "/profilePictures/mubasshira.jpg"
     },
     {
       id: 14,
       name: "Aayush behera",
       email: "aayushbehera7890@gmail.com",
       contact: "+91 8867461458",
-      roles: ["Content Writer", "Web Developer"],
+      roles: ["Content Writer", "Front-end Developer"],
       type: 1,
       joinDate: "November 2025",
       status: "Active",
-      link: "https://wa.me/+918867461458"
+      link: "https://wa.me/+918867461458",
+      image: "/profilePictures/aayush.jpg"
     },
     
     // Ex Members (type 0)
@@ -194,7 +209,8 @@ function Team() {
       type: 0,
       joinDate: "July 2025",
       status: "Alumni",
-      link: "https://www.facebook.com/share/16Dtkc8oSU/"
+      link: "https://www.facebook.com/share/16Dtkc8oSU/",
+      image: ""
     },
     {
       id: 16,
@@ -205,7 +221,8 @@ function Team() {
       type: 0,
       joinDate: "July 2025",
       status: "Alumni",
-      link: "#"
+      link: "#",
+      image: ""
     },
     {
       id: 17,
@@ -216,7 +233,8 @@ function Team() {
       type: 0,
       joinDate: "July 2025",
       status: "Alumni",
-      link: "https://www.facebook.com/share/1CseSppMnQ/"
+      link: "https://www.facebook.com/share/1CseSppMnQ/",
+      image: "/profilePictures/arkan.jpg"
     },
     {
       id: 18,
@@ -227,7 +245,8 @@ function Team() {
       type: 0,
       joinDate: "July 2025",
       status: "Alumni",
-      link: "#"
+      link: "#",
+      image: "/profilePictures/jakia.jpg"
     },
     {
       id: 19,
@@ -238,7 +257,8 @@ function Team() {
       type: 0,
       joinDate: "September 2025",
       status: "Alumni",
-      link: "https://wa.me/+8801641411942"
+      link: "https://wa.me/+8801641411942",
+      image: ""
     },
     {
       id: 20,
@@ -249,15 +269,21 @@ function Team() {
       type: 0,
       joinDate: "September 2025",
       status: "Alumni",
-      link: "https://wa.me/+8801713620571"
+      link: "https://wa.me/+8801713620571",
+      image: ""
     },
   ];
 
   const [filter, setFilter] = useState("all"); // "all", "star", "active", "ex"
   const [searchQuery, setSearchQuery] = useState("");
-
-  // Filter members based on selected filter and search
-  const filteredMembers = allMembers.filter(member => {
+  const rankPriority = {
+  2: 0, // Star
+  1: 1, // Active
+  0: 2  // Alumni
+};
+{/** */}
+const processedMembers = allMembers
+  .filter(member => {
     const matchesFilter = filter === "all" || 
       (filter === "star" && member.type === 2) ||
       (filter === "active" && member.type === 1) ||
@@ -265,11 +291,31 @@ function Team() {
     
     const matchesSearch = searchQuery === "" ||
       member.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      member.roles.some(role => role.toLowerCase().includes(searchQuery.toLowerCase())) ||
+      member.roles.some(role =>
+        role.toLowerCase().includes(searchQuery.toLowerCase())
+      ) ||
       member.email.toLowerCase().includes(searchQuery.toLowerCase());
-    
+
     return matchesFilter && matchesSearch;
+  })
+  .sort((a, b) => {
+    // 1️⃣ Featured first
+    if (!!b.featured !== !!a.featured) {
+      return b.featured ? 1 : -1;
+    }
+
+    // 2️⃣ Rank next
+    if (rankPriority[a.type] !== rankPriority[b.type]) {
+      return rankPriority[a.type] - rankPriority[b.type];
+    }
+
+    // 3️⃣ Alphabetical
+    return a.name.localeCompare(b.name);
   });
+
+const featuredMembers = processedMembers.filter(m => m.featured);
+const regularMembers = processedMembers.filter(m => !m.featured);
+
 
   // Get color based on member type
   const getTypeColor = (type) => {
@@ -300,6 +346,132 @@ function Team() {
       default: return <FiUser className="w-4 h-4" />;
     }
   };
+
+  const MemberCard = ({ member }) => {
+  return (
+    <a
+      href={member.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block md:col-span-2"
+    >
+      <div
+        className={`relative bg-pureWhite rounded-xl border-2 ${
+          member.type === 2
+            ? "border-accentTertiary"
+            : member.type === 1
+            ? "border-brandPrimary"
+            : "border-deepCharcoal"
+        } p-6 hover:shadow-lg transition-all duration-300`}
+      >
+        {/* Featured Badge */}
+        <span className="absolute top-4 right-4 bg-accentPrimary text-white text-xs px-3 py-1 rounded-full font-medium">
+          Featured
+        </span>
+
+        <div className="flex flex-col md:flex-row gap-6">
+
+          {/* LEFT SIDE – IMAGE */}
+          <div className="w-28 h-28 md:w-32 md:h-32 rounded-xl overflow-hidden bg-deepCharcoal/10 flex-shrink-0">
+            {member.image ? (
+              <img
+                src={member.image}
+                alt={member.name}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover transition-opacity duration-300 opacity-0"
+                onLoad={(e) => e.currentTarget.classList.remove("opacity-0")}
+              />
+            ) : (
+              <div className="flex items-center justify-center h-full font-bold text-xl text-deepCharcoal">
+                {member.name.split(" ").map(n => n[0]).join("")}
+              </div>
+            )}
+          </div>
+
+          {/* RIGHT SIDE – CONTENT */}
+          <div className="flex-1 flex flex-col justify-between">
+
+            {/* Top Section */}
+            <div>
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h3 className="text-2xl font-bold text-deepCharcoal group-hover:text-brandPrimary transition-colors">
+                  {member.name}
+                </h3>
+
+                <div
+                  className={`px-3 py-1 text-xs rounded-full text-pureWhite ${getTypeColor(
+                    member.type
+                  )}`}
+                >
+                  {getTypeLabel(member.type)}
+                </div>
+              </div>
+
+              <p className="text-sm text-darkCool mt-1">
+                Status: {member.status}
+              </p>
+            </div>
+
+            {/* Roles */}
+            <div className="mt-4">
+              <p className="text-sm font-medium text-deepCharcoal mb-2">
+                Roles
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {member.roles.map((role, idx) => (
+                  <span
+                    key={idx}
+                    className={`text-xs px-3 py-1 rounded ${
+                      member.type === 1
+                        ? "bg-brandPrimary/10 text-brandPrimary"
+                        : member.type === 2
+                        ? "bg-accentTertiary/10 text-charcoal"
+                        : "bg-deepCharcoal/10 text-deepCharcoal"
+                    }`}
+                  >
+                    {role}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Info Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 text-sm text-darkCool">
+              <div>
+                <span className="font-medium text-deepCharcoal">Email:</span>
+                <p className="truncate">{member.email}</p>
+              </div>
+
+              {member.contact && (
+                <div>
+                  <span className="font-medium text-deepCharcoal">Contact:</span>
+                  <p>{member.contact}</p>
+                </div>
+              )}
+
+              <div>
+                <span className="font-medium text-deepCharcoal">Joined:</span>
+                <p>{member.joinDate}</p>
+              </div>
+
+              {member.tenure && (
+                <div>
+                  <span className="font-medium text-deepCharcoal">Tenure:</span>
+                  <p>{member.tenure}</p>
+                </div>
+              )}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </a>
+  );
+};
+
+
+
 
   return (
     <div className="min-h-screen bg-paperWhite">
@@ -410,79 +582,9 @@ function Team() {
         </div>
 
         {/* Star Contributors Spotlight */}
-        {filter === "all" || filter === "star" ? (
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-accentTertiary/25 flex items-center justify-center">
-                <FiStar className="w-5 h-5 text-accentTertiary" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-deepCharcoal">Star Contributors</h2>
-                <p className="text-darkCool">Exceptional members driving innovation forward</p>
-              </div>
-            </div>
+  
 
-            {/* FIXED DIMENSION CARDS */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {allMembers
-                .filter(member => member.type === 2)
-                .map(member => (
-                  <a
-                    key={member.id}
-                    href={member.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block"
-                  >
-                    <div className="bg-pureWhite rounded-2xl border border-lightCool p-6 hover:shadow-xl hover:border-accentTertiary transition-all duration-300 h-[320px] flex flex-col">
-                      {/* Member Type Badge */}
-                      <div className="flex justify-between items-start mb-3">
-                        <div className={`px-3 py-1 ${getTypeColor(member.type)} text-pureWhite text-xs font-semibold rounded-full flex items-center gap-1`}>
-                          {getTypeIcon(member.type)}
-                          {getTypeLabel(member.type)}
-                        </div>
-                        <FiExternalLink className="w-4 h-4 text-darkCool group-hover:text-accentTertiary transition-colors flex-shrink-0" />
-                      </div>
-
-                      {/* Member Info */}
-                      <div className="flex-1 flex flex-col">
-                        {/* Avatar */}
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-brandPrimary/20 to-brandSecondary/20 mx-auto mb-4 flex items-center justify-center group-hover:scale-105 transition-transform flex-shrink-0">
-                          <span className="text-xl font-bold text-brandPrimary">
-                            {member.name.split(' ').map(n => n[0]).join('')}
-                          </span>
-                        </div>
-
-                        <h3 className="text-lg font-bold text-deepCharcoal mb-2 text-center line-clamp-1">{member.name}</h3>
-                        
-                        {/* Roles - Scrollable if too many */}
-                        <div className="flex flex-wrap justify-center gap-2 mb-4">
-  {member.roles.map((role, idx) => (
-    <span key={idx} className="text-xs px-2 py-1 bg-lightCool text-darkCool rounded">
-      {role}
-    </span>
-  ))}
-</div>
-
-                        {/* Tenure */}
-                        <div className="flex items-center justify-center gap-2 text-sm text-darkCool mb-4 flex-shrink-0">
-                          <FiCalendar className="w-4 h-4 flex-shrink-0" />
-                          <span className="text-center">{member.tenure} • {member.joinDate}</span>
-                        </div>
-
-                        {/* Email */}
-                        <div className="flex items-center justify-center gap-2 text-sm text-brandPrimary mt-auto flex-shrink-0">
-                          <FiMail className="w-4 h-4 flex-shrink-0" />
-                          <span className="truncate text-center">{member.email}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-            </div>
-          </div>
-        ) : null}
-
+          
         {/* All Members Grid with FIXED DIMENSIONS */}
         <div>
           <div className="flex items-center justify-between mb-6">
@@ -492,13 +594,13 @@ function Team() {
                filter === "active" ? "Active Members" : "Alumni Network"}
             </h2>
             <div className="text-sm text-darkCool">
-              Showing {filteredMembers.length} of {allMembers.length} members
+              Showing {regularMembers.length} of {allMembers.length} members
             </div>
           </div>
 
           {/* GRID WITH FIXED HEIGHT CARDS */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredMembers.map(member => (
+            {regularMembers.map(member => (
               <a
                 key={member.id}
                 href={member.link}
@@ -515,19 +617,20 @@ function Team() {
                   {/* Member Header - Fixed height section */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3 min-w-0">
-                      <div className={`w-16 h-16 rounded-full ${
-                        member.type === 1 ? 'bg-brandPrimary/10' : 
-                        member.type === 2 ? 'bg-accentTertiary/10' : 
-                        'bg-deepCharcoal/10'
-                      } flex items-center justify-center flex-shrink-0`}>
-                        <span className={`text-sm font-bold ${
-                          member.type === 1 ? 'text-brandPrimary' : 
-                          member.type === 2 ? 'text-accentTertiary' : 
-                          'text-deepCharcoal'
-                        }`}>
-                          {member.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
+                      <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 bg-deepCharcoal/10">
+  {member.image ? (
+    <img
+      src={member.image}
+      alt={member.name}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <span className="text-sm font-bold text-deepCharcoal flex items-center justify-center h-full">
+      {member.name.split(' ').map(n => n[0]).join('')}
+    </span>
+  )}
+</div>
+
                       <div className="min-w-0">
                         <h3 className="font-bold text-deepCharcoal group-hover:text-brandPrimary transition-colors truncate">
                           {member.name}

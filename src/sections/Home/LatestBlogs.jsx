@@ -8,21 +8,21 @@ import { Link } from "react-router-dom";
 function LatestBlogs() {
   const blogPosts = [
     {
-      category: "Research Methodology",
-      title: "How to Conduct Impactful Student Research",
-      description: "Learn systematic approaches to designing and executing research projects that make a real difference in academic and community contexts.",
+      category: "Career Exploration",
+      title: "Pursuing Non-Traditional Careers",
+      description: "A realistic look at the challenges, risks, and growth opportunities tied to unconventional career paths.",
       readTime: "5 min",
-      author: "Research Team",
-      date: "Feb 15, 2024",
+      author: "Team Theta",
+      date: "Feb 15, 2026",
       color: "brandPrimary"
     },
     {
-      category: "Project Development",
-      title: "From Idea to Implementation: A Student Guide",
-      description: "A step-by-step framework for turning innovative concepts into functional projects with practical impact and measurable outcomes.",
+      category: "Education Economics",
+      title: "The Rising Costs of Student Materials",
+      description: "A data-driven look at how increasing prices of books, supplies, and digital tools affect access to education and student performance.",
       readTime: "7 min",
-      author: "Project Leads",
-      date: "Feb 10, 2024",
+      author: "Project Iota",
+      date: "Feb 10, 2026",
       color: "brandSecondary"
     },
     {
@@ -35,13 +35,13 @@ function LatestBlogs() {
       color: "accentPrimary"
     },
     {
-      category: "Technical Insights",
-      title: "Building Scalable Solutions as Student Developers",
-      description: "Essential principles and best practices for creating robust, maintainable software solutions within academic constraints.",
-      readTime: "6 min",
-      author: "Tech Team",
-      date: "Jan 28, 2024",
-      color: "eggplant"
+      category: "Academic & Career Guidance",
+      title: "Global Pathways After O/A Levels",
+      description: "A broad roadmap outlining university and career opportunities across multiple countries, expanding options beyond conventional destinations.",
+      readTime: "16 min",
+      author: "Team Beta",
+      date: "July 28, 2025",
+      color: "accentSecondary"
     },
   ];
 
@@ -124,14 +124,7 @@ function LatestBlogs() {
                 </div>
 
                 {/* Read More Button */}
-                <div className="flex items-center justify-between pt-4 border-t border-lightCool">
-                  <span className="text-sm font-medium text-brandPrimary group-hover:text-brandSecondary transition-colors">
-                    Read Article
-                  </span>
-                  <div className="group-hover:translate-x-1 transition-transform">
-                    <GoArrowRight className="w-5 h-5 text-brandPrimary group-hover:text-brandSecondary" />
-                  </div>
-                </div>
+                
               </div>
             </div>
           ))}
@@ -158,10 +151,10 @@ function LatestBlogs() {
         <div className="mt-16 p-6 bg-gradient-to-r from-brandPrimary/5 to-brandSecondary/5 rounded-2xl border border-lightCool">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             {[
-              { value: "50+", label: "Articles Published" },
-              { value: "25+", label: "Student Authors" },
-              { value: "10k+", label: "Total Reads" },
-              { value: "15+", label: "Categories" },
+              { value: "20+", label: "Articles Published" },
+              { value: "10+", label: "Student Authors" },
+              { value: "Students", label: "Primary Focus" },
+              { value: "5+", label: "Categories" },
             ].map((stat, index) => (
               <div key={index} className="p-4">
                 <div className="text-2xl font-bold text-brandPrimary mb-1">{stat.value}</div>
