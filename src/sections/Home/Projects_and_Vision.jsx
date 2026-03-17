@@ -36,7 +36,7 @@ export default function Projects_and_Vision() {
     "Interdisciplinary Collaboration",
     "Structured Research Training", 
     "Project Development Guidance",
-    "Community Engagement Focus",
+    "Community-Centered Approach",
     "Academic Focus with Real-World Application",
   ];
 
