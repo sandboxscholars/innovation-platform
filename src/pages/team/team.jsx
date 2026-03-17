@@ -45,12 +45,12 @@ function Team() {
       name: "Ishita Reddy Yakkanti",
       email: "ishitareddyya2510@gmail.com",
       contact: "704-791-6326",
-      roles: ["Data Analyst", "STEM Advocate"],
+      roles: ["Executive Member", "Project Manager"],
       type: 2,
       joinDate: "September 2025",
       status: "Active",
       link: "mailto:ishitareddyya2510@gmail.com",
-      image: "/profilePictures/ishita.png"
+      image: "/profilePictures/ishita.jpg"
     },
     {
       id: 3,
